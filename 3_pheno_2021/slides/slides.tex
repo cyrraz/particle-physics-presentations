@@ -1,0 +1,473 @@
+%===========================================================================================================
+\def\bdto {BDT$_1$\xspace}
+\def\bdtt {BDT$_2$\xspace}
+\def\ptK {$p_{\mathrm{T}}(K^+)$}
+
+\def\bdtoff {BDT$_{\mathrm{c}}$\xspace}
+
+\def\lumiyfours         {62.9\,\invfb\xspace} % 62.93
+\def\lumioff            {9.2\,\invfb\xspace} % 9.22
+%===========================================================================================================
+\newcommand*{\talk}[4]{{#1}, \emph{#2}, \href{#3}{\color{blue!40!gray} [#4]}.}
+\newcommand\itemshape[1]{\setbeamertemplate{itemize item}[#1]\usebeamertemplate{itemize item}}
+\begin{frame}{Belle II talks at PHENO 2021}
+\bi
+{\small
+\item {\talk{Christoph Schwanda}{Beauty physics from Belle II}{https://indico.cern.ch/event/982783/contributions/4364768/}{link}}
+\itemii {\talk{Soumen Halder}{Results and Prospects of Radiative and Electroweak Penguin Decays at Belle (II)}{https://indico.cern.ch/event/982783/contributions/4365603/}{link}}
+\itemii {\talk{G\"uney Polat}{Tau physics prospects at Belle II}{https://indico.cern.ch/event/982783/contributions/4364551/}{link}}
+\itemii {\talk{Katharina Dort}{Dark-sector physics at Belle II}{https://indico.cern.ch/event/982783/contributions/4362293/}{link}}
+\itemii {\talk{Sebastiano Raiz}{Charmless $B$ decays at Belle II}{https://indico.cern.ch/event/982783/contributions/4364552/}{link}}
+\itemii {\talk{Chiara La Licata}{The re-discovery of the decays for the CP violation measurements}{https://indico.cern.ch/event/982783/contributions/4364562/}{link}}
+{\setbeamercolor{item}{fg=red}\itemiii {\talk{Cyrille Praz}{Search for the rare electroweak decay \BKnn in the early Belle II dataset}{https://indico.cern.ch/event/982783/contributions/4365605/}{link}}}
+}
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Outline}
+ \tableofcontents
+\end{frame}
+%===========================================================================================================
+\section{Theoretical motivation}
+%===========================================================================================================
+\begin{frame}{Branching fraction in the Standard Model}
+\bi
+\item \BKnn is suppressed in the SM and has never been observed. 
+\ei
+\vspace{0.1cm}
+\begin{columns}
+\begin{column}{0.5\linewidth} 
+\centering
+\includegraphics[width=0.6\linewidth]{figs/feynman_loop_v2}
+\end{column}
+\begin{column}{0.5\linewidth}
+\centering
+\includegraphics[width=0.6\linewidth]{figs/feynman_box_v2}
+\end{column}
+\end{columns}
+\bi
+\itemiii {$\mathrm{BR}(\Bp\to\Kp\nunub)_{\mathrm{SM}}=(4.6\pm0.5)\times10^{-6}$ \hfill \href{https://arxiv.org/abs/1606.00916}{\color{blue!40!gray} [1606.00916]}.}
+\itemiii 10\% theoretical uncertainty mainly from $B\to K$ form factors.
+\itemiii {$B\to K$ form factors from \href{https://arxiv.org/abs/1409.4557}{\color{blue!40!gray} [1409.4557]} used for signal simulation.}
+\ei
+\vspace{0.1cm}
+\centering
+\includegraphics[width=0.4\linewidth]{figs/q2_ff.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Beyond the Standard Model}
+\bi
+\item Since $\nu_e$, $\nu_\mu$ and $\nu_\tau$ contribute, \BKnn is sensitive to potential lepton flavour universality violation.
+\itemi Complementary probe of BSM physics scenarios proposed to explain anomalies observed in $b\to s\ell^+\ell^-$ transitions \href{https://arxiv.org/pdf/2005.03734.pdf}{\color{blue!40!gray} [2005.03734]}. 
+
+\itemi Multiple models beyond the SM constrained by $\mathrm{BR}(\Bp\to\Kp\nunub)$:
+\bi
+\itemii dark matter particles \hfill \href{https://arxiv.org/pdf/1911.03490.pdf}{\color{blue!40!gray} [1911.03490]}.
+\itemii leptoquarks \hfill \href{https://arxiv.org/pdf/1806.05689.pdf}{\color{blue!40!gray} [1806.05689]}.
+\itemii axions \hfill \href{https://arxiv.org/pdf/2002.04623.pdf}{\color{blue!40!gray} [2002.04623]}.
+\itemii ... 
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\section{The Belle II experiment}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Outline}
+ \tableofcontents[currentsection]
+\end{frame}
+%===========================================================================================================
+\begin{frame}{The SuperKEKB accelerator}
+\begin{columns}
+\begin{column}{0.48\linewidth} 
+\bi \small
+\item{\epem collider in Tsukuba, Japan.}
+\itemi{$\sqrt{s}=10.6\gev=\mathrm{m}(\Y4S)$.}
+\itemi{$\mathrm{BR}(\Y4S\to\BB)>96\%$.}
+\itemi{$\displaystyle\int_{2019.02.04}^{2021.05.21}\,L\,\mathrm{dt}\approx157\invfb$.}
+\itemi{World highest instant. luminosity.}
+\bi
+\item{$L=2.96\times10^{34}\cms$ achieved in May 2021.}
+\ei
+\ei
+\end{column}
+\begin{column}{0.52\linewidth}
+\centering
+\includegraphics[width=0.75\linewidth]{figs/super_kekb}\\
+\vspace{0.1cm}
+\includegraphics[width=0.9\linewidth]{figs/luminosity_2}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{{The Belle II detector}}
+\begin{columns}
+\begin{column}{0.45\linewidth} 
+\begin{itemize} \small
+\item Pixel Detector (PXD).
+\vspace{0.25cm}
+\item Silicon Vertex Detector (SVD).
+\vspace{0.25cm}
+\item Central Drift Chamber (CDC).
+\vspace{0.25cm}
+\item Calorimeter (ECL).
+\vspace{0.25cm}
+\item Aerogel Ring-Imaging Cherenkov (ARICH).
+\vspace{0.25cm}
+\item Time-Of-Propagation (TOP) counter.
+\vspace{0.25cm}
+\item $K_L^0$ and $\mu$ detection (KLM).
+\end{itemize}
+\end{column}
+\begin{column}{0.55\linewidth}
+\centering
+\begin{tikzpicture}
+\node (a) {\includegraphics[width=0.9\linewidth]{figs/belle2_with_flags}};
+\node (b) [below=0.25cm of a] {\includegraphics[width=0.65\linewidth]{figs/vxd.pdf} };
+\node(c)  [above=-0.25cm of b, xshift=-1.5cm]{};
+\draw[thick, red,->] (a.south west){}+(0.9cm,0.1cm) to (c);
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\section{Search for \BKnn decays}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Outline}
+ \tableofcontents[currentsection]
+\end{frame}
+%===========================================================================================================
+\subsection{Introduction}
+%===========================================================================================================
+\begin{frame}{Data samples used for this analysis}
+\bi
+\item  {$63\invfb$ collected at $\sqrt{s}=\mathrm{m}(\Y4S)$ ("on-resonance").} 
+\itemi {$9\invfb$ collected at $\sqrt{s}=\mathrm{m}(\Y4S)-60\mev$ ("off-resonance").}
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Signal and background after high-level trigger}
+\bi
+\item Signal.
+\bi
+\itemii {$\epem\to\Y4S\to B^+(\to K^+\nunub)B^-$}.
+\ei
+\itemii Background.
+\bi
+\itemii Generic $B$-meson decays: $\epem\to\Y4S\to\BpBm\,$ or $\,\BzBzb$.
+\itemii Continuum events: $\epem\to q\bar{q}\,$ or $\,\tau^{+}\tau^{-}$ ($q=u,d,s,c$ quarks). 
+\ei
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.5\linewidth]{figs/sphericity_v4}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{$B$-meson tagging}
+\bi
+\item Previous searches used tagged approaches, where the second $B$-meson is reconstructed...
+\bi
+\itemiii ...in a hadronic decay: $\varepsilon_{\mathrm{sig}}=\mathcal{O}(0.04\%)$ \hfill \href{https://arxiv.org/abs/1303.7465v2}{\color{blue!40!gray} [1303.7465 (Babar)]}.
+\itemiii ...in a semileptonic decay: $\varepsilon_{\mathrm{sig}}=\mathcal{O}(0.2\%)$ \hfill \href{https://arxiv.org/abs/1702.03224}{\color{blue!40!gray} [1702.03224 (Belle)]}.
+\ei
+\ei
+\vspace{0.25cm}
+\centering
+\includegraphics[width=0.6\linewidth]{figs/bsig_btag.pdf}
+\bi
+\itemi In the following, an inclusive tagging approach is used.
+\bi
+\itemiii No explicit reconstruction of the second $B$-meson.
+\itemiii Exploitation of the distinctive topological features of \BKnn.
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Signal kaon candidate selection}
+\bi
+\item Highest-$p_T$ track in event as $\Kp$ candidate.
+\bi
+\itemii Correct candidate in 80\% of the cases.
+\itemii PID requirement to suppress pion background.
+\ei
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.5\linewidth]{figs/B_sig_K_pt.pdf}
+\end{frame}
+%===========================================================================================================
+\subsection{Binary classification}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Outline}
+ \tableofcontents[currentsection, currentsubsection]
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Features}
+\bi
+\itemii Boosted decision trees (BDT) \href{https://arxiv.org/abs/1609.06119}{\color{blue!40!gray} [1609.06119]} trained with 51 features.
+\bi
+\itemiii Event topology (Fox-Wolfram moments, sphericity, ...).
+\itemiii Rest-of-event (ROE) variables.
+\itemiii Missing energy, momentum.
+\itemiii Vertex separation.
+\itemiii ...
+\ei
+\ei
+\vspace{0.5cm}
+\centering
+\begin{columns}
+\begin{column}{0.333\linewidth}
+\centering
+\includegraphics[width=1.0\linewidth]{figs/B_sig_roeDeltae_ipMask.pdf}
+\end{column}
+\begin{column}{0.333\linewidth}
+\centering
+\includegraphics[width=1.0\linewidth]{figs/B_sig_weMissM2_ipMask_0.pdf}
+\end{column}
+\begin{column}{0.333\linewidth}
+\centering
+\vspace{-2.05cm}
+\includegraphics[width=1.0\linewidth]{figs/sphericity_v4.pdf}\\
+\vspace{0.3cm}
+\includegraphics[width=1.0\linewidth]{figs/sphericity.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Binary classifiers in series}
+\bi
+\item Train \bdto on $\mathcal{O}(10^7)$ simulated events.
+\item Train \bdtt on $\mathcal{O}(10^7)$ simulated events with \bdto$>0.9$.
+\item {$\max(S/\sqrt{S+B})$ reached around \bdtt$>0.95$.}
+\ei
+\vspace{0.25cm}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\centering
+\includegraphics[width=0.7\linewidth]{figs/overfitting_bdt1.pdf}
+\includegraphics[width=0.7\linewidth]{figs/overfitting_bdt2.pdf}
+\end{column}
+\begin{column}{0.5\linewidth}
+\centering
+\includegraphics[width=0.7\linewidth]{figs/significance_bdt1.pdf}
+\includegraphics[width=0.7\linewidth]{figs/significance_bdt2.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Validation channel: $\Bp\to\Kp\jpsi(\to\cancel{\mumu})$}
+\bi
+\item To check the data-simulation agreement, $\Bp\to\Kp\jpsi(\to\mumu)$ decays are selected.
+\bi
+\itemiii Muons are removed from the reconstruction to mimic the signal.
+\itemiii Kaon 3-momentum is sampled from simulated signal events.
+\ei
+\ei
+\vspace{0.25cm}
+\centering
+\includegraphics[width=0.7\linewidth]{figs/MC_and_data_bdt.pdf}
+\end{frame}
+%===========================================================================================================
+\subsection{Signal-strength extraction}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Outline}
+ \tableofcontents[currentsection, currentsubsection]
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Statistical model}
+\bi
+\item Binned likelihood defined in the \bdtt$\times$\ptK$\times\sqrt{s}$ space.
+\itemiii {$4\times3\times2=24$ bins.}
+\bi
+\itemiii {\bdtt$\in[0.93,\,0.95,\,0.97,\,0.99,\,1.00]$.}
+\itemiii {\ptK$\in[0.5,\,2.0,\,2.4,\,3.5]\gevc$.}
+\itemiii {$\sqrt{s}\in\{\mathrm{m}(\Y4S),\, \mathrm{m}(\Y4S)-60\mevcc\}$.}
+\ei
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.5\linewidth]{figs/bins_2D.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Statistical model}
+\bi
+\item Likelihood function = product of Poisson probability density functions combining the information from the 24 bins. 
+\bi
+\itemii Templates for the yields of the signal and background derived from simulation.
+\itemii Implementation in the \href{https://github.com/scikit-hep/pyhf}{\color{blue!40!gray} pyhf} package, maximum-likelihood fit using \href{https://www.scipy.org/about.html}{\color{blue!40!gray} scipy}.
+\ei
+\itemi Fit parameters:
+\bi
+\itemii Signal strength $\mu$ (factor w.r.t. SM expectation for signal yield).
+\itemii Nuisance parameters to include the systematic uncertainties \textit{via} event-count modifiers.
+\bi
+\itemii Main systematic source: background yield normalisation.
+\ei
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Fit to data}
+\bi
+\item Maximum-likelihood fit to 24 bins of the \bdtt$\times$\ptK$\times\sqrt{s}$ space.
+\ei
+\vspace{0.5cm}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\bi
+\item On-resonance.
+\ei
+\centering
+\includegraphics[width=1.0\linewidth]{figs/SRs_postfit.pdf}
+\end{column}
+\begin{column}{0.5\linewidth}
+\bi
+\item Off-resonance.
+\ei
+\centering
+\includegraphics[width=1.0\linewidth]{figs/postfit_offresCR.pdf}
+\end{column}
+\end{columns}\end{frame}
+%===========================================================================================================
+\begin{frame}{Result}
+\bi
+\item {\small $\mu = 4.2^{+3.4}_{-3.2} = 4.2^{+2.9}_{-2.8}(\mathrm{stat}){}^{+1.8}_{-1.6}(\mathrm{syst})$.}
+\itemii {\small $\mathrm{BR}(\BKnn)=\left[1.9^{+1.6}_{-1.5}\right] \times 10^{-5} = \left[1.9^{+1.3}_{-1.3}(\mathrm{stat}){}^{+0.8}_{-0.7}(\mathrm{syst})\right] \times 10^{-5}$.}
+\ei
+\begin{columns}
+\begin{column}{0.45\linewidth}
+\centering
+\includegraphics[width=1.0\linewidth]{figs/mu_profile.pdf}
+\end{column}
+\begin{column}{0.55\linewidth}
+\centering
+\includegraphics[width=1.0\linewidth]{figs/br_comp.pdf}
+\end{column}
+\end{columns}
+\bi
+\item Total uncertainty on $\mu$: profile likelihood scan, fitting the model with fixed values of $\mu$ while keeping the other fit parameters free.
+\ei
+\end{frame}
+%===========================================================================================================
+\section{Conclusion and outlook}
+%==========================================================================================================
+\begin{frame}{Conclusion and outlook}
+\bi
+\item Search for \BKnn decays with an inclusive tagging approach was performed at Belle II with $(63+9)\invfb$ of data.
+\itemi {$\mathrm{BR}(\BKnn)=\left[1.9^{+1.6}_{-1.5}\right] \times 10^{-5}$ \hfill ($<4.1\times 10^{-5}$ @ 90\% C.L.).}
+\itemi Pre-print available \href{https://arxiv.org/abs/2104.12624}{\color{blue!40!gray} [2104.12624]}, submitted for publication.
+\itemi Next iteration of the analysis will include:
+\bi
+\itemii More data.
+\itemii More channels ($\B^0\to K^{*0}\nu\overline{\nu}$, $\B^0\to K^0_S\nu\overline{\nu}$, ...).
+\itemii More classifiers (neural networks).
+\ei	
+\ei
+\end{frame}
+%===========================================================================================================
+\section*{}
+%==========================================================================================================
+\begin{frame}{}
+\centering
+{\Large Thank you for your attention!}\\ 
+
+
+\end{frame}
+%===========================================================================================================
+\section*{Backup}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Signal kaon candidate selection and event pre-selection}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\bi
+\item Basic track cleanup:
+\bi
+\itemiii {\footnotesize $p_T>0.1\gevc$, $\theta\in$ CDC, $|dr|<0.5\cm$, $|dz|<3.0\cm$.}
+\ei
+\itemiii Highest-$p_T$ clean track in event as $\Kp$ candidate.
+\bi
+\itemiii Correct candidate in 80\% of the cases.
+\itemiii \# PXD hits $\ge 1$.
+\itemiii PID requirement to suppress pion background.
+\ei
+\itemiii Loose preselection: 
+\bi
+\itemiii {$4\leq N_{\mathrm{tracks}}\leq10$.}
+\itemiii {$0.3<\theta(\mathbf{p_{miss}})<2.8 \rad$.}
+\itemiii {$E_{\mathrm{visible}}>4\gev$.}
+\ei
+\ei
+\end{column}
+\begin{column}{0.5\linewidth}
+\centering
+\includegraphics[width=0.85\linewidth]{figs/nTracksCleaned.pdf}
+\includegraphics[width=0.85\linewidth]{figs/B_sig_K_pt.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Signal efficiency at \bdtt$>0.95$}
+\bi
+\itemi At \bdtt$>0.95$, the signal efficiency is 12.5\% for $q^2\approx0$ and drops to zero for $q^2>16\gev^2/c^4$.
+\bi
+\itemii Sensitive to potential light dark matter candidates.
+\ei
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.49\linewidth]{figs/q2_eff.pdf}
+\includegraphics[width=0.49\linewidth]{figs/q2_ff.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Background composition at \bdtt $>0.93$}
+\bi
+\item At \bdtt$>0.93$, $D$-mesons contribute a lot to the remaining  background from $B$-meson decays.
+\ei
+\vspace{0.5cm}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\centering
+\includegraphics[width=1.0\linewidth]{figs/charged_sig_side_chart.pdf}
+\end{column}
+\begin{column}{0.5\linewidth}
+\centering
+\includegraphics[width=1.0\linewidth]{figs/mixed_sig_side_chart.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Fit validation}
+\bi
+\item Toys  generated  for  the simulated data set.
+\bi
+\itemii Poisson statistical fluctuations.
+\itemii Gaussian systematic fluctuations.
+\ei
+\ei
+\vspace{0.25cm}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\bi
+\item {\scriptsize Signal injection study, $\mu_{\mathrm{sig}}\in\{1,\,5,\,20\}$}.
+\ei
+\centering
+\includegraphics[width=1.0\linewidth]{figs/signal_pulls_pyhf.pdf}
+\end{column}
+\begin{column}{0.5\linewidth}
+\bi
+\item {\scriptsize Data-model compatibility.}
+\ei
+\centering
+\includegraphics[width=1.0\linewidth]{figs/data_model_compatibility_pyhf.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Limit setting}
+\bi
+\item Expected and observed upper limits on the branching fraction are determined using the \href{https://iopscience.iop.org/article/10.1088/0954-3899/28/10/313}{\color{blue!40!gray} CLs method}.
+\ei
+\centering
+\vspace{0.5cm}
+\includegraphics[width=0.5\linewidth]{figs/B_Knunu_CLs_unblinding_90CL_both_expected_and_observed.pdf}
+\end{frame}
+%===========================================================================================================

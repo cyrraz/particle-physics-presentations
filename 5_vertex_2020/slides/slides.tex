@@ -1,0 +1,452 @@
+%===========================================================================================================
+\begin{frame}{Outline}
+ \tableofcontents%[currentsection, currentsubsection]
+\end{frame}
+%===========================================================================================================
+\section{Introduction}
+%===========================================================================================================
+\newcommand*{\talk}[4]{{#1}, \emph{#2}, \href{#3}{\color{blue!40!gray} [#4]}.}
+\newcommand\itemshape[1]{\setbeamertemplate{itemize item}[#1]\usebeamertemplate{itemize item}}
+\begin{frame}{Belle II talks and posters at VERTEX 2020}
+\bi
+{\small
+\item \talk{Qingyuan Liu}{Operational Experience and Performance of the Belle II Pixel Detector}{https://indico.cern.ch/event/895924/contributions/3968848/}{A02}
+\itemiii {\talk{Giuliana Rizzo}{The Belle II Silicon Vertex Detector: Performance and Operational Experience in the first year of data taking}{https://indico.cern.ch/event/895924/contributions/3968849/}{A03}}
+\itemiii {\talk{Yuma Uematsu}{A Study for Hit-time Reconstruction of Belle II Silicon Vertex Detector}{https://indico.cern.ch/event/895924/contributions/3988295/}{P02}}
+\itemiii {\talk{Sagar Hazra}{Particle identification in Belle II silicon vertex detector}{https://indico.cern.ch/event/895924/contributions/3993222/}{P03}}
+\itemiii {\talk{Katsuro Nakamura}{Development of the thin and fine-pitch silicon strip detector aiming for the Belle II upgrade}{https://indico.cern.ch/event/895924/contributions/3988300/}{P05}}
+{\setbeamercolor{item}{fg=red}\itemiii {\talk{Cyrille Praz}{Tracking performance and interaction point properties at the Belle II experiment}{https://indico.cern.ch/event/895924/contributions/4018211/}{A07}}}
+\itemiii {\talk{Jerome Baudot}{Upgrade of the vertex detector of the Belle II experiment}{https://indico.cern.ch/event/895924/contributions/3968854/}{B01}}
+}
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{SuperKEKB}
+\begin{columns}
+\begin{column}{0.48\linewidth} 
+\bi \small
+\item{\epem collider.}
+\itemi{$\sqrt{s}=10.6\gev=\mathrm{m}(\Y4S)c^2$.}
+\itemi{$\mathrm{BR}(\Y4S\to\BB)>96\%$.}
+\itemi{$\displaystyle\int_{2019}^{\rm present}\,L\,\mathrm{dt}\approx70\invfb$.}
+\itemi{World highest instant. luminosity.}
+\bi
+\item{$L=2.4\times10^{34}\cms$ achieved in June 2020.}
+\ei
+\ei
+\end{column}
+\begin{column}{0.52\linewidth}
+\centering
+\includegraphics[width=0.75\linewidth]{figs/super_kekb}
+\includegraphics[width=0.65\linewidth, angle=-90]{figs/SuperKEKB_roadmap2020}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Nano-beam scheme (idea from Pantaleo Raimondi)}
+\begin{columns}
+\begin{column}{0.52\linewidth} 
+{\small
+\bi
+\item Goal: $\beta_y^*=0.3\mm$.
+\item Hourglass effect limited if $\sigma^{eff}_z<\beta_y^*$.
+\item Half crossing angle:
+\bi
+\item $\phi_x\approx40\mrad$.
+\ei
+\item Nominal beam spot parameters:
+\bi
+\item $\sigma_x\approx10\mum$.
+\item $\sigma^{eff}_z=\frac{\sigma_x}{\sin\phi_x}\approx0.25\mm$.
+\item $\sigma_y\approx50\nm$.
+\ei
+\ei
+\includegraphics[width=0.9\linewidth]{figs/nano_beam_2} 
+}
+\end{column}
+\begin{column}{0.48\linewidth}
+\includegraphics[width=1\linewidth]{figs/nano_beam} 
+\small\href{https://docs.belle2.org/record/1212?ln=en}{\color{blue!40!gray} [BELLE2-TALK-CONF-2018-142]}
+\href{https://arxiv.org/abs/1809.01958}{\color{blue!40!gray} [1809.01958]}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Crab waist transformation}
+\bi
+\item Since 2020, SuperKEKB has introduced the crab waist transformation to further increase luminosity. {\small \href{https://arxiv.org/abs/physics/0702033}{\color{blue!40!gray} [0702033]}, \href{https://arxiv.org/abs/1608.06150}{\color{blue!40!gray} [1608.06150]}}
+\bi
+\itemi Align $\min(\beta_y)$ of one beam along the trajectory of the other beam.
+\itemi Additional benefits are lower background and improved beam lifetime.
+\ei
+\ei
+\centering
+\begin{tikzpicture}
+\node (a) {\includegraphics[width=0.4\linewidth]{figs/crab_waist_1}};
+\node (b) [right=1.5cm of a] {\includegraphics[width=0.4\linewidth]{figs/crab_waist_2}};
+\draw[thick, ->] (a.east) to (b.west);
+\end{tikzpicture}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Importance of the impact parameter resolution}
+\bi
+\item SuperKEKB has a smaller Lorentz boost compared to KEKB.
+\itemiii Belle II has a better impact parameter resolution (factor $\sim1.5-2$) thanks to its pixel detector and a smaller beam pipe diameter.
+\bi
+\itemiii {$(\beta\gamma)_{\rm SuperKEKB}\approx0.28<0.42\approx(\beta\gamma)_{\rm KEKB}$.}
+\itemiii Precise measurements of decay vertices is crucial for time-dependent studies.
+\ei
+\ei
+\centering
+\includegraphics[width=0.7\linewidth]{figs/bsig_btag}
+\bi
+\item $\B$ mesons nearly at rest in the \Y4S frame. 
+\bi
+\itemii{$\Delta t \approx \frac {\Delta z_{\rm {boost}}} {c (\beta \gamma)_{\Y4S}},\hspace{0.5cm} \Delta z_{\rm {boost}}=\mathcal{O}(100\mum)$.}
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Proper-time resolution}
+\bi
+\item Thanks to the Belle II vertex detector, the proper-time resolution is a factor $\sim2$ better than at Belle and Babar.
+\itemii Example of a $D$ meson lifetime measurement {\tiny \href{https://docs.belle2.org/record/2074?ln=en}{\color{blue!40!gray} [BELLE2-TALK-CONF-2020-046]}}:
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.5\linewidth]{figs/time_resolution} 
+\end{frame}
+%===========================================================================================================
+\section{Belle II tracking}
+%===========================================================================================================
+\begin{frame}{\only<1>{The Belle II detector} \only<2>{Tracking subdetectors}}
+\begin{columns}
+\begin{column}{0.45\linewidth} 
+\begin{itemize} \small
+\item  \color<2>{red} Pixel Detector (PXD).
+\vspace{0.25cm}
+\item Silicon Vertex Detector (SVD).
+\vspace{0.25cm}
+\item Central Drift Chamber (CDC).
+\vspace{0.25cm}
+\item \color<2>{gray}Calori\color<2>{red}meter \color<2>{gray} (ECL).
+\vspace{0.25cm}
+\item Aerogel Ring-Imaging Cherenkov (ARICH).
+\vspace{0.25cm}
+\item Time-Of-Propagation (TOP) counter.
+\vspace{0.25cm}
+\item $K_L^0$ and $\mu$ detection (KLM).
+\end{itemize}
+\end{column}
+\begin{column}{0.55\linewidth}
+\centering
+\begin{tikzpicture}
+\node (a) {\includegraphics[width=0.9\linewidth]{figs/belle2_with_flags}};
+\node (b) [below=0.25cm of a] {\includegraphics[width=0.65\linewidth]{figs/vxd.pdf} };
+\node(c)  [above=-0.25cm of b, xshift=-1.5cm]{};
+\draw[thick, red,->] (a.south west){}+(0.9cm,0.1cm) to (c);
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{VXD (=PXD+SVD)}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\hspace{4.cm}\includegraphics[width=0.3\linewidth]{figs/pxd1}
+\begin{itemize} \small
+\vspace{-1.8cm}
+\item PXD.
+\vspace{0.05cm}
+\begin{itemize}
+\item Pixel detector. 
+\vspace{0.05cm}
+\item 2 layers.
+\vspace{0.05cm}
+\item Radii: 14, 22\mm.
+\vspace{0.1cm}
+\end{itemize}
+\item SVD.
+\vspace{0.05cm}
+\begin{itemize}
+\item Double-sided silicon strips.
+\vspace{0.05cm}
+\item 4 layers.
+\vspace{0.05cm}
+\item Radii: 39 to 135\mm.
+\end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{0.5\linewidth}
+\includegraphics[width=1.0\linewidth]{figs/vxd.pdf}
+\end{column}
+\end{columns}
+\includegraphics[width=1.0\linewidth]{figs/FullVXD_transverse}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{CDC}
+\begin{columns}
+\begin{column}{0.45\linewidth} 
+\begin{itemize} \small
+\item Drift chamber.
+\vspace{0.25cm}
+\item $\approx50\,000$ wires.
+\vspace{0.25cm}
+\item 56 layers.
+\vspace{0.15cm}
+\begin{itemize}
+\item Radii: 168 to 1111.4\mm.
+\vspace{0.25cm}
+\end{itemize}
+\item 9 superlayers.
+\vspace{0.15cm}
+\begin{itemize}
+\item axial orientation (A).
+\vspace{0.15cm}
+\item stereo orientation (U,V).
+\vspace{0.25cm}
+\end{itemize}
+\item Configuration:
+\vspace{0.15cm}
+\begin{itemize}
+\item AUAVAUAVA.
+\end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{0.55\linewidth}
+\centering
+\includegraphics[width=0.7\linewidth]{figs/cdc_wires}
+\includegraphics[width=0.7\linewidth]{figs/RPhiSlice}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Charged particles from simulated \Y4S events}
+\begin{columns}
+\begin{column}{0.5\linewidth} 
+\begin{itemize} 
+\item $p_{\mathrm{T}}<100\mevc$:
+\vspace{0.2cm}
+\begin{itemize}
+\item Track does \emph{not} reach CDC.
+\item Detected by standalone SVD.
+\vspace{0.4cm}
+\end{itemize}
+\item $p_{\mathrm{T}}\in[100,\,300]\mevc$:
+\vspace{0.2cm}
+\begin{itemize}
+\item Track can curl inside CDC.
+\vspace{0.5cm}
+\end{itemize}
+\end{itemize}
+\adjustbox{max height=0.9\textheight,max width=0.9\textwidth}{
+ \centering
+\input{figs/tikz_particle_pie_chart.tex}
+}
+\end{column}
+\begin{column}{0.5\linewidth}
+\includegraphics[width=1\linewidth]{figs/transMomentumDistribution}
+\vspace{0.5cm}
+\hfill
+\href{https://www.sciencedirect.com/science/article/pii/S0010465520302861}{\tiny \color{blue!40!gray}[doi: 10.1016/j.cpc.2020.107610]}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Track reconstruction steps\\ {\tiny Belle II Tracking Group, \emph{Track finding at Belle II}, Computer Physics Communications (2020). \href{https://www.sciencedirect.com/science/article/pii/S0010465520302861}{\color{blue!40!gray}[doi: 10.1016/j.cpc.2020.107610]}}}
+\centering
+\adjustbox{max height=0.8\textheight,max width=1.0\textwidth}{
+\input{figs/tracking_overview.tex}
+}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{SVD Standalone \hfill {\small \href{https://www.sciencedirect.com/science/article/pii/S0010465520302861}{\color{blue!40!gray}[doi: 10.1016/j.cpc.2020.107610]}}}
+\bi
+\item Each SVD sensor is divided in $3\times3$ sectors. 
+\itemiii Sector map trained on simulated tracks to learn geometrical relations between sectors.
+\itemiii Filters reject bad space point combinations (angle, timing).
+\itemiii Cellular automaton yields a set of paths.
+\itemiii Track candidates selected based on $\chi^2$ and \#degrees of freedom.
+\ei
+\centering
+\includegraphics[width=0.3\linewidth]{figs/sectorMapSectors}  
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Standalone SVD to CDC extrapolation}
+\bi
+\item Extrapolating tracks found by the standalone SVD to the CDC improves the CDC track-finding effiency.
+\bi
+\itemii Significant improvement at large $|\tan\lambda|$.
+\ei
+\itemii Addition of CDC hits improves momentum resolution of the full track. 
+\ei
+\vspace{0.25cm}
+\centering
+2-track events (data), $\lambda\equiv\frac{\pi}{2}-\theta$\\
+\includegraphics[width=0.6\linewidth]{figs/efficiency} 
+\end{frame}
+%===========================================================================================================
+\section{Beam spot parameter measurement}
+%===========================================================================================================
+\begin{frame}{Outline}
+\tableofcontents[currentsection, currentsubsection]
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Track parametrisation: 2D picture}
+\begin{itemize}
+\item {\color{cyan}Blue area}: high and low energy beams overlap.
+\vspace{0.2cm}
+\item $\phi_0$: azimutal angle at the point of closest approach (POCA).
+\vspace{0.2cm}
+\item $d_0$: Transverse impact parameter at the POCA.
+\vspace{0.2cm}
+%\vspace{1.0cm}
+\end{itemize}
+\centering
+\includegraphics[width=0.6\linewidth]{figs/d0_definition.pdf}
+\begin{itemize}
+\itemi {$\sigma_{68}(d_0)$ depends on the intrinsic detector resolution $\sigma_i$ and the beam spot size:}
+\vspace{0.25cm}
+\begin{itemize}
+\item $\sigma_{68}(d_0)=\sqrt{\sigma_i^2+(\sigma_x\sin\phi_0)^2+(\sigma_y\cos\phi_0)^2}$.
+\vspace{1.0cm}
+\end{itemize}
+\end{itemize}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Beam spot size and impact parameter resolution  (2019) }%\hspace{1cm} \href{https://docs.belle2.org/record/1511}{\tiny [BELLE2-NOTE-TE-2019-01]}}
+\begin{columns}
+\begin{column}{0.5\linewidth} 
+\begin{itemize} 
+\vspace{-0.4cm}
+\item \small Select tracks in 2-track events.
+\vspace{0.2cm}
+\end{itemize}
+\input{tables/requirements.table.tex}
+\hfill
+\vspace{0.2cm}
+\includegraphics[width=0.9\linewidth]{figs/d0_definition} 
+\begin{itemize} 
+\item \small $\sigma_{68}$(.): half of the symmetric range around the median containing 68\% of the distribution.
+\end{itemize}
+\end{column}
+\begin{column}{0.45\linewidth}
+\includegraphics[width=1\linewidth]{figs/d0_width} 
+\includegraphics[width=1\linewidth]{figs/d0_difference_width} 
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Beam spot size measurement: 1st method  (2019) }%\hspace{1cm} \href{https://docs.belle2.org/record/1511}{\tiny [BELLE2-NOTE-TE-2019-01]}}
+\bi
+\item Unfolding of the beam profile.
+\ei
+\begin{tikzpicture}
+\node (a) {\includegraphics[width=0.4\linewidth]{figs/d0_width}};
+\node (a2) [below=0.1cm of a.north east]{$2$};
+\node (b) [right=0.25cm of a]{$-$};
+\node (c) [right=0.25cm of b] {\includegraphics[width=0.4\linewidth]{figs/d0_difference_width}};
+\node (c2) [below=0.1cm of c.north east]{$2$};
+\node (d) [right=0.25cm of c]{$=$};
+\coordinate (a0) at ($(a.south west) +(-0.25cm,2.5cm)$);
+\draw[thick] (a0) -- (a.south west) -- (a.north west)+(0.0cm,0.0cm) -- (c.north east);
+\end{tikzpicture}
+\centering
+\includegraphics[width=0.4\linewidth]{figs/beam_profile} 
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Beam spot size measurement: 2nd method (2020)}
+\bi
+\itemi The beam spot size can be obtained from the correlation of the impact parameters $d_1$ and $d_2$ in 2-track events.\footnote{\tiny S. Donati and L. Ristori, \emph{Measuring beam width and SVX impact parameter resolution}, Tech. rep. CDF-Note-4189, Batavia, USA: FERMILAB, 2003, \href {http://beamdocs.fnal.gov/AD-public/DocDB/ShowDocument?docid=609}{\color{blue!40!gray} [url]}. See also \href{https://arxiv.org/pdf/1405.6569.pdf}{ \color{blue!40!gray} [1405.6569]}.}
+\bi
+\itemiii Beam spot size and resolution separated $\implies$ no unfolding needed.
+\ei
+\itemii {$d_1=x_{\rm IP}\sin\phi_1-y_{\rm IP}\cos\phi_1$}
+\itemii {$d_2=x_{\rm IP}\sin\phi_2-y_{\rm IP}\cos\phi_2$}
+\itemii {$d_1d_2=\left(x_{\rm IP}\sin\phi_1-y_{\rm IP}\cos\phi_1\right)\cdot\left(x_{\rm IP}\sin\phi_2-y_{\rm IP}\cos\phi_2\right)$}
+\itemii {\small $\left\langle d_1d_2 \right\rangle=\sigma_x^2\sin\phi_1\sin\phi_2+\sigma_y^2\cos\phi_1\cos\phi_2+C\cdot(\sin\phi_1\cos\phi_2+\sin\phi_2\cos\phi_1)$.}
+\bi
+\item {\vspace{-0.1cm}$C=-\left\langle x_{\rm IP}y_{\rm IP} \right\rangle$.}
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Beam spot size measurement: 2nd method (2020)}
+\bi
+\item {\small $\left\langle d_1d_2 \right\rangle-\underbrace{\sigma_y^2\cos\phi_1\cos\phi_2+C(\sin\phi_1\cos\phi_2+\sin\phi_2\cos\phi_1)}_{D}=\sigma_x^2\sin\phi_1\sin\phi_2$.}
+\vspace{0.5cm}
+\ei
+\begin{columns}
+\begin{column}{0.3\linewidth}
+\centering
+Linear fit\\
+\vspace{0.5cm}
+\includegraphics[width=0.9\linewidth]{figs/fit_xsize} 
+\end{column}
+\begin{column}{0.7\linewidth}
+\centering
+Time dependence of $\sigma_x$\\
+\vspace{0.5cm} 
+\includegraphics[width=1\linewidth]{figs/xsize} 
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Beam spot orientation}
+\bi
+\item {Also possible to measure the beam spot orientation w.r.t. the Belle II coordinate system.}
+\vspace{0.5cm}
+\ei
+\begin{columns}
+\begin{column}{0.2\linewidth}
+\centering
+\includegraphics[width=0.9\linewidth]{figs/tilt_illustration} 
+\end{column}
+\begin{column}{0.8\linewidth}
+\centering
+Time dependence of $\theta_{xz}$\\
+\vspace{0.5cm}
+\includegraphics[width=1\linewidth]{figs/tilt} 
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Beam spot parameters}
+\bi
+\item The tracking group is currently developing an algorithm to fully measure the beam spot average position and 3D profile.
+\itemi Comparison with accelerator values allows to cross-check consistency. 
+\vspace{0.5cm}
+\ei
+\centering
+\input{figs/tikz_feedback.tex}
+\end{frame}
+%===========================================================================================================
+\section{Conclusion and outlook}
+%===========================================================================================================
+\begin{frame}{Conclusion and outlook}
+\bi
+\item SuperKEKB has a smaller boost compared to KEKB, but Belle II compensates with a better impact parameter resolution thanks to its pixel detector.
+\itemi Beam spot parameters can be measured from the Belle II tracking.
+\bi
+\itemii Comparison with accelerator values allows for cross-checks.
+\itemii The results can be used to improve simulation.
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\section*{Questions}
+%===========================================================================================================
+\begin{frame}{Questions}
+\centering
+\Large Thank you for your attention.
+\end{frame}
+%===========================================================================================================
+\section*{Backup} % [noframenumbering]
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Track parametrisation: full picture \hspace{1cm}
+\href{https://arxiv.org/abs/1901.11198}{\color{blue!40!gray}{\small [1901.11198],}
+\href{https://github.com/ndawe/tikz-track} {\small [github]}}
+}
+\centering
+\includegraphics[width=0.9\linewidth]{figs/helix3d}
+\end{frame}

@@ -1,0 +1,23 @@
+% Packages
+\usepackage{FiraSans}
+\usepackage{booktabs}
+
+% Beamer theme
+\usetheme{metropolis}
+
+% Beamer settings
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+\setbeamersize{text margin left=0.25cm,text margin right=0.5cm}
+\setbeamertemplate{frame footer}{\tiny \insertshortauthor \hspace{0.01cm} | \hspace{0.01cm} \insertshorttitle \hspace{0.01cm} | \hspace{0.01cm} \insertshortdate}
+
+% Bullet point commands
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\itemi}[1]{{\vspace{0.5cm}\item{{#1}}}}
+\newcommand{\itemii}[1]{{\vspace{0.25cm}\item{{#1}}}}
+\newcommand{\itemiii}[1]{{\vspace{0.1cm}\item{{#1}}}}
+
+% Commands useful in tables
+\newcommand{\Tstrut}{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand{\Bstrut}{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut

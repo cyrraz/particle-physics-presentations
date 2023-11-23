@@ -1,0 +1,355 @@
+%===========================================================================================================
+\begin{frame}{Outline}
+ \tableofcontents
+\end{frame}
+%===========================================================================================================
+\section{Introduction}
+%===========================================================================================================
+\begin{frame}{SuperKEKB}
+\begin{columns}
+\begin{column}{0.48\linewidth} 
+\bi \small
+\item{\epem collider.}
+\itemii{$\sqrt{s}=10.6\gev=\mathrm{m}(\Y4S)c^2$.}
+\itemii{$\mathrm{BR}(\Y4S\to\BB)>96\%$.}
+\ei
+\vspace{0.1cm}
+\includegraphics[width=0.7\linewidth, angle=-90]{figs/SuperKEKB_roadmap2020}
+\end{column}
+\begin{column}{0.52\linewidth}
+\includegraphics[width=0.9\linewidth]{figs/super_kekb} 
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{The Belle II detector}
+\begin{columns}
+\begin{column}{0.45\linewidth} 
+\begin{itemize} \small
+\item  Pixel detector (PXD).
+\vspace{0.25cm}
+\item Silicon Vertex Detector (SVD).
+\vspace{0.25cm}
+\item Central Drift Chamber (CDC).
+\vspace{0.25cm}
+\item Calorimeter (ECL).
+\vspace{0.25cm}
+\item Aerogel Ring-Imaging Cherenkov (ARICH).
+\vspace{0.25cm}
+\item Time-Of-Propagation (TOP) counter.
+\vspace{0.25cm}
+\item $K_L^0$ and $\mu$ detection (KLM).
+\end{itemize}
+\end{column}
+\begin{column}{0.55\linewidth}
+\centering
+
+\begin{tikzpicture}
+\node (a) {\includegraphics[width=0.9\linewidth]{figs/belle2_with_flags}};
+\node (b) [below=0.25cm of a] {\includegraphics[width=0.65\linewidth]{figs/vxd.pdf} };
+\node(c)  [above=-0.25cm of b, xshift=-1.5cm]{};
+\draw[thick, red,->] (a.south west){}+(0.9cm,0.1cm) to (c);
+\end{tikzpicture}
+
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+
+%===========================================================================================================
+\begin{frame}{Introduction}
+\bi
+\item \Bz lifetime measurement using \underline{2019} Belle II data ({\small$\mathcal{L}=8.7\pm0.2\invfb$}).
+\itemi Belle II has a smaller boost compared to Belle, but a better impact parameter resolution (factor $\sim1.5-2$) thanks to the pixel detector.
+\bi
+\itemiii {$(\beta\gamma)_{\rm Belle\,II}\approx0.28<0.42\approx(\beta\gamma)_{\rm Belle}$.}
+\itemiii A good vertex separation is crucial for time-dependent studies.
+\itemiii CP violation results will be presented by N. Rout {\small\href{https://indico.cern.ch/event/868940/contributions/3815671/}{\color{blue!40!gray}[link]}}.
+\itemiii {The Belle II tracking allows for a measurement of the beamspot size:}
+\ei
+\ei
+\centering
+\includegraphics[width=0.5\linewidth]{figs/xsize} 
+\end{frame}
+%===========================================================================================================
+\section{Measurement strategy}
+%===========================================================================================================
+\begin{frame}{$\Bz$ lifetime measurement strategy}
+\bi
+\item{\Bz hadronic decays fully reconstructed.}
+\itemiii{Other $\B$ vertex from the remaining tracks in the event.}
+\ei
+\vspace{0.25cm}
+\centering
+\includegraphics[width=0.7\linewidth]{figs/svg/bsig_btag}
+\bi
+\item $\B$ mesons nearly at rest in the \Y4S frame. 
+\bi
+\itemiii Flight distance in the transverse plan neglected.
+\itemiii{$\Delta t \approx \frac {\Delta z_{\rm {boost}}} {c (\beta \gamma)_{\Y4S}},\hspace{0.5cm} \Delta z_{\rm {boost}}=\mathcal{O}(100\mum)$.}
+\ei
+\ei
+\vspace{0.3cm}
+\begin{equation*}
+{p}_{\rm na\"ive}(\Delta t, \tau_\B) = \int_0^\infty\mathrm{d}t_1\int_0^\infty\mathrm{d}t_2\>\frac{1}{\tau_B^2}\e^\frac{-(t_1+t_2)}{\tau_B}\delta(t_2-t_1- \Delta t)= {1\over2 \tau_B}\e^{-\frac{|\Delta t|}{\tau_B}}.
+\end{equation*}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Reconstruction of the signal $\Bz$}
+\bi
+\item Hadronic final states used to reconstruct $\Bz$ decays.
+\ei
+\vspace{0.25cm}
+\centering
+\adjustbox{max height=0.7\textheight,max width=0.7\textwidth}{
+\begin{tabular}{lc}
+	\hline
+	Decay &  Selection Criteria\\
+	\hline
+	\multicolumn{2}{c}{$\Bz$ decays} \\
+	\hline
+	$\Bz \to \Dm \pip$ & \multirow{4}{*}{ $M_{\rm bc} > 5.2\>\gevcc$ and  $-0.2 < \Delta E < 0.2 \>\gev$} \\
+	$\Bz \to \Dm \rho^+$   \\
+	$\Bz \to \Dstarm \pip$  \\
+	$\Bz \to \Dstarm \rho^+$ \\
+	\hline
+	\multicolumn{2}{c}{$D$ decays}\\
+	\hline
+	$\Dstarp \to \Dz \pim$ & $ 0.143  < m_{\Dstarp}-m_{\Dz} < 0.147\>\gevcc$ \\
+	\hline
+	$\Dm \to \Kp\pim\pim$ &  $ |m-m_{PDG}|<0.015\>\gevcc$ \\
+	\hline
+	$\Dz \to \Km \pip$  &  \multirow{3}{*}{$|m-m_{PDG}|<0.015\>\gevcc$   } \\
+	$\Dz \to \Km \pip \piz$ \\
+	$\Dz \to \Km \pip \pip \pim$  \\
+	\hline
+	\multicolumn{2}{c}{$\rho$ decay}\\
+	\hline
+	$\rho^+ \to \pip \piz$ & $ |m-m_{PDG}|< 0.10\>\gevcc$ \\
+	\hline
+\end{tabular}
+}
+\vspace{0.25cm}
+\bi
+\item $M_{\rm bc}\equiv\sqrt{E^{*2}_{\rm Beam}-p_{\Bz}^{*2}}$\hspace{0.5cm};\hspace{0.5cm}$\Delta E\equiv E^{*}_{\Bz}-E^{*}_{\rm Beam}$.
+\ei
+\end{frame}
+%===========================================================================================================
+\section{Fit strategy}
+%===========================================================================================================
+\begin{frame}{Model for the total probability density}
+\begin{equation*}
+{\color{blue} \mathrm{\textit{p}}_{\rm all}(\Delta t)} \equiv {\color{red} n_{\rm sig} \mathrm{\textit{p}}_{\rm sig}(\Delta t,\tau_{\Bz})}+ {\color{violet}n_{\rm \bbbar} \mathrm{\textit{p}}_{\rm \bbbar}(\Delta t, \tau_{\textrm{eff}})}+ {\color{brown}n_{\rm cont} \mathrm{\textit{p}}_{ \rm cont}(\Delta t)}.
+\end{equation*}
+\bi
+\item Contributions:
+\bi
+\itemii Basic $\Delta t$ density $\rightarrow{p}_{\rm na\"ive}(\Delta t, \tau_\B) = {1\over2 \tau_B}\e^{-\frac{|\Delta t|}{\tau_B}}$.
+\itemii Resolution density $\rightarrow\mathrm{\calR}(\delta_{\Delta t})=$ sum of 3 Gaussian densities.
+\itemii {\color{red} Signal density $\rightarrow\mathrm{\textit{p}}_{\rm sig}(\Delta t,\tau_{\Bz})=\left({p}_{\rm na\"ive}(\cdot, \tau_{\Bz})*\mathrm{\calR}\right)(\Delta t)$.}
+\itemii{\color{violet} $B$ background density $\rightarrow\mathrm{\textit{p}}_{\rm \bbbar}(\Delta t,\tau_{\textrm{eff}})=\left({p}_{\rm na\"ive}(\cdot, \tau_{\textrm{eff}})*\mathrm{\calR}\right)(\Delta t)$.}
+\itemii {\color{brown} Continuum density $\rightarrow\mathrm{\textit{p}}_{ \rm cont}(\Delta t)=$ sum of 3 Gaussian densities.}
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Extraction of yields}
+\bi
+\item 2D extended maximum likelihood fit to the unbinned $M_{\rm bc}$ and $\Delta E$.
+\bi
+\itemi Extraction of ${\color{red} n_{\rm sig}}$, ${\color{violet} n_{\rm \bbbar}}$ and ${\color{brown} n_{\rm cont}}$.
+\ei
+\ei
+\vspace{0.5cm}
+{\small \hfill \href{https://arxiv.org/abs/2005.07507}{\color{blue!40!gray}[arxiv: 2005.07507]}}
+\begin{columns}
+\begin{column}{0.5\linewidth} 
+\includegraphics[width=1.0\linewidth]{figs/Fig1a} 
+\end{column}
+\begin{column}{0.5\linewidth}
+\includegraphics[width=1.0\linewidth]{figs/Fig1b} 
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\newcommand{\mc}[1]{{\color{teal} #1}}
+\newcommand{\data}[1]{{\color{purple} #1}}
+\begin{frame}{Continuum shape}
+\bi
+\itemiii Fit to $\Delta t$ of the sideband in \mc{simulation} (\mc{left}) and \data{data} (\data{right}).
+\bi
+\itemiii Extraction of the continuum shape parameters.
+\itemiii {$\left\{\mc{f_{1,2,3}},\,\mc{s_{2,3}},\,\mc{\Delta\mu}\right\}$ from \mc{simulation}, $\left\{\data{\mu_1},\,\data{\sigma_1}\right\}$ from \data{data}.}
+\ei
+\ei
+\vspace{0.4cm}
+\begin{equation}
+\scriptsize \mathrm{\textit{p}}_{ \rm cont}(\Delta t) =   \mc{f_{1}} \>{\cal{G}}(\Delta t; \data{\mu_{1}},\data{\sigma_{1}} )
++\mc{f_{2}} \>{\cal{G}}(\Delta t; \data{\mu_{1}} + \mc{\Delta\mu},\mc{s_{2}} \times \data{\sigma_{1}})+(1-\mc{f_{1}}-\mc{f_{2}})\>{\cal{G}}(\Delta t; \data{\mu_{1}},\mc{s_{2}}\times\mc{s_{3}}\times\data{\sigma_{1}})
+\vspace{0.4cm}
+\end{equation}
+{\small \hfill \href{https://arxiv.org/abs/2005.07507}{\color{blue!40!gray}[arxiv: 2005.07507]}}
+\begin{columns}
+\begin{column}{0.5\linewidth} 
+\includegraphics[width=1.0\linewidth]{figs/Fig2a} 
+\end{column}
+\begin{column}{0.5\linewidth}
+\includegraphics[width=1.0\linewidth]{figs/Fig2b} 
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Resolution function shape}
+\bi
+\item Fit to $\Delta t$ residual for the signal contribution of the simulated sample.
+\bi
+\itemi Extraction of the resolution parameters.
+\ei
+\ei
+\vspace{0.4cm}
+{\small \hfill \href{https://arxiv.org/abs/2005.07507}{\color{blue!40!gray}[arxiv: 2005.07507]}}
+% Let one empty  line here
+
+\centering
+\includegraphics[width=0.5\linewidth]{figs/Fig3}
+\bi
+\itemiii After this step, $\tau_{\rm eff}$ can be fixed from $\bbbar$ simulated events. 
+\ei
+\end{frame}
+%===========================================================================================================
+\section{Systematic studies}
+%===========================================================================================================
+\begin{frame}{Systematic studies}
+\bi
+
+\itemi Systematic uncertainty sources considered:
+\bi
+\itemi Fit parametrisation.
+\bi
+\itemii Reproduce fit on 10k simulated bootstrap samples $\rightarrow\sigma=0.05\ps$.
+\itemii Check what happens when $\tau_{\rm eff}$ is left free $\rightarrow\sigma=0.01\ps$.
+\ei
+\itemi Calibration and alignment constants in data.
+\bi
+\itemii Reproduce study on a data subsample with different constants $\rightarrow\sigma=0.03\ps$.
+\ei
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\section{Results}
+%===========================================================================================================
+\begin{frame}{Final result}
+\bi
+\item Fit to $\Delta t$ for all $\Bz\to D^{(*)}h$ of the selected decay candidates.
+\bi
+\itemii 3 free parameters: $\tau_{\Bz}$, $\mu_{1,{\rm resolution}}$ and $\sigma_{1,{\rm resolution}}$.
+\itemii {$\tau_{\Bz} = 1.48 \pm 0.28\,\,\rm{(stat)} \pm 0.06 \,\rm{(syst)} \ps$.}
+\itemii {Reduced $\chi^2=0.83$.}
+\ei
+\ei
+{\small \hfill \href{https://arxiv.org/abs/2005.07507}{\color{blue!40!gray}[arxiv: 2005.07507]}}
+\begin{columns}
+\begin{column}{0.5\linewidth} 
+\includegraphics[width=1.0\linewidth]{figs/Fig5a} 
+\end{column}
+\begin{column}{0.5\linewidth}
+\includegraphics[width=1.0\linewidth]{figs/Fig5b} 
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\section{Conclusion}
+%===========================================================================================================
+\begin{frame}{Conclusion}
+\bi
+\item \Bz lifetime was measured using 2019 Belle II data ({\small$\mathcal{L}=8.7\pm0.2\invfb$}).
+\bi
+\itemii{$\tau_{\Bz} = 1.48 \pm 0.28\,\,\rm{(stat)} \pm 0.06 \,\rm{(syst)} \ps$.}
+\itemi{Good agreement with world average ($\tau_{\Bz} = 1.519\pm0.004 \ps$).}
+\itemi Assess the accuracy of vertex fitting tools, time resolution modeling and detector alignment.
+\itemi Conference note available online: {\small\href{https://arxiv.org/abs/2005.07507}{\color{blue!40!gray}[arxiv: 2005.07507]}}.
+\ei
+\itemi See also $\Dz$ lifetime study in G. Casarosa's talk {\small\href{https://indico.cern.ch/event/868940/contributions/3815673/}{\color{blue!40!gray}[link]}}.
+\bi
+\itemii Larger data sample, time resolution $\times 2$ better than Belle and BaBar.
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\section*{Questions}
+%===========================================================================================================
+\begin{frame}{Questions}
+\centering
+\Large Thank you for your attention.
+\end{frame}
+%===========================================================================================================
+\section*{Backup} % [noframenumbering]
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Details on fit parameters}
+\bi
+\vspace{-0.2cm}
+\item Fit 1: $M_{\rm bc}$ and $\Delta E$.
+\itemiii Fit 2: $\Delta t$ of the sideband events.
+\itemiii Fit 3: $\Delta t$ residual.
+\itemiii Final fit: $\Delta t$ of the signal region.
+\ei
+\vspace{0.2cm}
+\begin{equation}
+\scriptsize \mathrm{\calR}(\delta_{\Delta t}) =   f_{1} \>{\cal{G}}(\delta_{\Delta t}; \mu_{1},\sigma_{1} )
++f_{2} \>{\cal{G}}(\delta_{\Delta t}; \mu_{1} + \Delta\mu ,s_{2} \times \sigma_{1})+(1-f_{1} -f_{2})\>{\cal{G}}(\delta_{\Delta t}; \mu_{1},s_{2} \times s_{3}\times \sigma_{1})
+\end{equation}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\centering
+\adjustbox{max height=0.75\textheight,max width=0.75\textwidth}{
+    \begin{tabular}{l|lc}
+      \hline
+      & Fit parameter & value \\
+      \hline
+      \multirow{7}{*}{Fit 1} & $n_{sgn}$ fit region & $\left(1.22 \pm 0.04\right) \times 10^{3}$\\
+      & $n_{b\overline{b}}$ fit region & $\left(1.29 \pm 0.07\right) \times 10^{3}$\\
+      & $n_{cont}$ fit region & $\left(1.14 \pm 0.06\right) \times 10^{3}$\\
+      & \multicolumn{2}{c}{\rule{0.3\linewidth}{0.4pt}}\\
+      & $n_{sgn}$ signal region & $\left(1.10 \pm 0.04\right) \times 10^{3}$\\
+      & $n_{b\overline{b}}$ signal region & $270 \pm 32$\\
+      & $n_{cont}$ signal region & $140 \pm 21$\\
+      \hline
+      \multirow{2}{*}{Fit 2} & $\mu_{1cont}$  [ps] & $0.021 \pm 0.021$\\
+      & $\sigma_{1cont}$  [ps] & $0.429 \pm 0.015$\\
+      \hline
+      \multirow{3}{*}{Final fit }  & $\mu_{1res}$ [ps] & $-0.03 \pm 0.06$\\
+      & $\sigma_{1res}$  [ps] & $0.56 \pm 0.18$\\
+      & $\tau_{\Bz}$  [ps] & $1.48 \pm 0.28$\\
+      \hline
+    \end{tabular}
+}
+\end{column}
+\begin{column}{0.5\linewidth}
+\centering
+\adjustbox{max height=0.75\textheight,max width=0.75\textwidth}{
+    \begin{tabular}{l|lc}
+      \hline
+      & Fit parameter & value \\
+      \hline
+      \multirow{5}{*}{Fit 2 } & $\Delta\mu_{cont} $ [\gevcc] & $-0.0846 \pm 0.026$ \\
+      & $f_{1cont} $  & $0.468  \pm 0.021$ \\
+      & $f_{2cont} $ & $0.357 \pm 0.017$ \\
+      & $s_{2cont}$ & $ 2.88 \pm 0.096$ \\
+      & $s_{3cont}$ & $ 3.02 \pm 0.11 $ \\
+      \hline
+      \multirow{7}{*}{Fit 3 } &  $\Delta\mu_{res} $ [\gevcc] & $ -0.360 \pm 0.031 $ \\
+      & $f_{1res} $ & $ 0.561 \pm 0.016$  \\
+      & $f_{2res} $ & $ 0.336 \pm 0.014$ \\
+      & $s_{2res}$ & $ 2.84 \pm 0.079$ \\
+      & $s_{3res}$ & $ 2.99 \pm 0.13$ \\
+      & \multicolumn{2}{c}{\rule{0.4\linewidth}{0.4pt}}\\
+      & $\tau_{\textrm{eff}}$ [ps]& $ 1.31 \pm 0.03 $ \\
+      \hline
+    \end{tabular}
+}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+%===========================================================================================================

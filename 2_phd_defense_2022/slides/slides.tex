@@ -1,0 +1,940 @@
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Outline}
+ \tableofcontents[subsubsectionstyle=hide]
+\end{frame}
+%===========================================================================================================
+\section{Theoretical motivation}
+%===========================================================================================================
+\begin{frame}{Introduction}
+\bi
+\item The Standard Model (SM) describes the known elementary particles and their interactions.
+\itemi Studies of $B$-meson decays are interesting to test the predictions of the SM and potentially detect the presence of new physics effects.
+\itemi {The decay \BKnn is a weak process involving a $b\to s$ transition.}
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{\BKnn in the Standard Model}
+\bi
+\item \BKnn is suppressed in the SM and has never been observed.
+\itemii Decay described by an effective Hamiltonian.
+\ei
+
+\vspace{0.15cm}
+\begin{tikzpicture}
+\node (a) {\includegraphics[width=0.3\linewidth]{figs/phd_thesis/theoretical_motivation/feynman/feynman_loop.pdf}};
+\node (c) [right=0.1cm of a] {\includegraphics[width=0.3\linewidth]{figs/phd_thesis/theoretical_motivation/feynman/feynman_box.pdf}};
+\node (d) [right=0.01cm of c]{$\rightarrow$};
+\node (e) [right=0.01cm of d] {\includegraphics[width=0.3\linewidth]{figs/phd_thesis/theoretical_motivation/feynman/feynman_effective_vertex.pdf}};
+\end{tikzpicture}
+\vspace{-0.2cm}
+
+\bi
+\item {$\mathcal{H}_{\mathrm{eff}}^{\mathrm{SM}}=-\frac{4G_F}{\sqrt{2}}\,V_{tb}\,V_{ts}^*\,C_L^{\mathrm{SM}}\,\mathcal{O}_L+\mathrm{h.c.}$}
+\bi
+\itemii {$G_F$: Fermi constant.}
+\itemii {$V_{ij}$: Elements of the Cabibbo-Kobayashi-Maskawa matrix.}
+\itemii {$\mathcal{O}_{L}$: effective vertex operator, $\mathcal{O}_{L}=\frac{e^2}{16\pi^2}\,(\bar{s}_L\gamma_{\mu}b_L)\,(\bar{\nu}_L\gamma^\mu\nu_L)$.}
+\itemii {$C_L^{\mathrm{SM}}$: effective coupling constant (Wilson coefficient).}
+\ei
+\ei
+
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Branching fraction in the Standard Model}
+
+\bi
+\item {$ \frac{\dd\text{\Br}(\BKnn)_\text{SM}}{\dd q^2}
+=3\,
+\tau_{B}\,
+\left|
+\frac{G_F \alpha}{16\pi^2}\,
+\sqrt{\frac{m_B^3}{3\pi}}\,
+V_{tb}V_{ts}^*\,
+C_L^{\mathrm{SM}}\,
+f_+(q^2)\,
+\right|^2
+\left(\frac{\lambda_K(q^2)}{m_B^4}\right)^{\frac{3}{2}}$}
+\bi
+\itemi {$q^2$: Squared invariant mass of the two-neutrino system.}
+\itemi {$\tau_B,\,m_B$: Lifetime and mass of the $B$ meson.}
+\itemi {$\alpha$: Electromagnetic coupling.}
+\itemi {$f_+(q^2)$: Hadronic form factor ($q^2$-dependence of $\left\langle K\right|\bar{s}\gamma_{\mu}b\left|B\right\rangle$).}
+\itemi {$\lambda_K(q^2)$: Phase-space factor.}
+\ei
+\ei
+
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Branching fraction in the Standard Model}
+
+\bi
+\item {$\Br(\BKpnn)_{\mathrm{SM}}=\mypow{(4.6\pm0.5)}{-6}$. \hfill \href{https://doi.org/10.1016/j.ppnp.2016.10.001}{\color{blue!40!gray} \tiny [{Prog.~Part.~Nucl.~Phys.~\textbf{92}, 50 (2017)]}}}
+\itemii {$\Br(\BKzznn)_{\mathrm{SM}}=\mypow{(4.3\pm0.5)}{-6}$.}
+\itemii 10\% theoretical uncertainty mainly from $B\to K$ form factor.
+\itemii {$B\to K$ form factor used for signal simulation. \hfill \href{https://doi.org/10.1007/JHEP02(2015)184}{\color{blue!40!gray}\tiny [J.~High Energy Phys.~\textbf{02}, 184 (2015)]}}
+\ei
+\vspace{0.25cm}
+\centering
+\includegraphics[width=0.5\textwidth]{figs/phd_thesis/theoretical_motivation/phase_space_vs_ff.pdf}
+
+\end{frame}
+%===========================================================================================================
+\begin{frame}{New Physics (NP)}
+\bi
+\item Since $\nu_e$, $\nu_\mu$ and $\nu_\tau$ contribute, \BKnn is sensitive to potential lepton flavor universality violation.
+\itemii Complementary probe of NP scenarios proposed to explain anomalies observed in $b\to s\ell^+\ell^-$ transitions. \hfill \href{https://doi.org/10.1016/j.physletb.2020.135769}{\color{blue!40!gray} \tiny [Phys.~Lett.~B \textbf{809}, 135769 (2020)]}
+\itemii Multiple models beyond the SM constrained by $\mathrm{BR}(\BKnn)$:
+\bi
+\itemiii axions (dark matter candidate). \hfill \href{https://doi.org/10.1103/PhysRevD.102.015023}{\color{blue!40!gray} \tiny [Phys.~Rev.~D \textbf{102}, 015023 (2020)]}
+\itemiii leptoquarks. \hfill \href{https://doi.org/10.1103/PhysRevD.98.055003}{\color{blue!40!gray} \tiny [Phys.~Rev.~D \textbf{98}, 055003 (2018)]}
+\ei
+\ei
+\vspace{0.2cm}
+\centering
+\includegraphics[width=0.4\textwidth]{figs/phd_thesis/theoretical_motivation/feynman/feynman_leptoquark.pdf}
+\end{frame}
+%===========================================================================================================
+\section{The Belle II experiment}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Outline}
+ \tableofcontents[currentsection, subsubsectionstyle=hide]
+\end{frame}
+%===========================================================================================================
+\begin{frame}{The SuperKEKB accelerator}
+\begin{columns}
+\begin{column}{0.48\linewidth} 
+\bi \small
+\item{\epem collider in Tsukuba, Japan.}
+\itemi{$\sqrt{s}=10.6\gev=\mathrm{m}(\Y4S)$.}
+\itemi{$\mathrm{BR}(\Y4S\to\BB)>96\%$.}
+\itemi{$\displaystyle\int_{25.03.2019}^{22.06.2022}\,L\,\mathrm{dt}\approx363\invfb$.}
+\bi
+\itemii {This analysis: $189/63 \invfb$.}
+\ei
+\itemi{Long-term target:}
+\bi
+\itemii {$\displaystyle\int\,L\,\mathrm{dt}= 50\invab$.}
+\ei
+\ei
+\end{column}
+\begin{column}{0.52\linewidth}
+\centering
+\includegraphics[width=1.0\linewidth]{figs/phd_thesis/experimental_setup/superkekb}\\
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Main \epem processes at $\sqrt{s}=10.6\gev$}
+\centering
+\adjustbox{max height=1.0\textheight,max width=1.0\textwidth}{
+\begin{tabular}{ll}
+\input{tables/cross_sections.tex}
+\end{tabular}
+}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{{The Belle II detector}}
+\begin{columns}
+\begin{column}{0.45\linewidth} 
+\begin{itemize} \small
+\item Pixel Detector (PXD).
+\vspace{0.25cm}
+\item Silicon Vertex Detector (SVD).
+\vspace{0.25cm}
+\item Central Drift Chamber (CDC).
+\vspace{0.25cm}
+\item Calorimeter (ECL).
+\vspace{0.25cm}
+\item Aerogel Ring-Imaging Cherenkov (ARICH).
+\vspace{0.25cm}
+\item Time-Of-Propagation (TOP) counter.
+\vspace{0.25cm}
+\item $K_L^0$ and $\mu$ detection (KLM).
+\end{itemize}
+\end{column}
+\begin{column}{0.55\linewidth}
+\centering
+\begin{tikzpicture}
+\node (a) {\includegraphics[width=0.9\linewidth]{figs/phd_thesis/experimental_setup/belleii_new.pdf}};
+\node (b) [below=0.25cm of a] {\includegraphics[width=0.65\linewidth]{figs/vxd.pdf} };
+\node(c)  [above=-0.25cm of b, xshift=-1.5cm]{};
+\draw[thick, red,->] (a.south west){}+(0.9cm,0.1cm) to (c);
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\section{Search for \BKpnn decays}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Outline}
+ \tableofcontents[currentsection, subsubsectionstyle=hide]
+\end{frame}
+%===========================================================================================================
+\subsection{Introduction}
+%===========================================================================================================
+\begin{frame}{$B$-meson tagging}
+\bi
+\item Previous searches used tagging methods, where the second $B$-meson ($B_{\mathrm{tag}}$) is reconstructed...
+\bi
+\itemiii ...in a hadronic decay: $\varepsilon_{\mathrm{sig}}=\mathcal{O}(0.04\%)$. \hfill \href{https://doi.org/10.1103/PhysRevD.87.112005}{\color{blue!40!gray} \tiny [Phys.~Rev.~D \textbf{87}, 112005 (2013) (Babar)]}
+\itemiii ...in a semileptonic decay: $\varepsilon_{\mathrm{sig}}=\mathcal{O}(0.2\%)$. \hfill \href{https://doi.org/10.1103/PhysRevD.96.091101}{\color{blue!40!gray} \tiny [Phys.~Rev.~D \textbf{96}, 091101 (2017) (Belle)]}
+\ei
+\ei
+\vspace{0.25cm}
+\centering
+\includegraphics[width=0.6\linewidth]{figs/bsig_btag.pdf}
+\bi
+\itemi In the following, an inclusive tagging method is used.
+\bi
+\itemiii No explicit reconstruction of the second $B$-meson.
+\itemiii Exploitation of distinctive topological properties of \BKpnn.
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Reconstructed invariant mass of the two-neutrino system}
+\bi
+\item Invariant mass of the two-neutrino system not accessible.
+\bi
+\itemii {$q^2=(\mathbf{P}^*_B-\mathbf{P}^*_K)^2=m_B^2+m_K^2-2\,E^*_BE^*_K+2\,\mathbf{p}^*_B\cdot\mathbf{p}^*_K$.}
+\ei
+\itemii Define a reconstructed invariant mass (approximation: $\mathbf{p}^*_B=\mathbf{0}$):
+\bi
+\itemii {$q_{\mathrm{rec}}^2=m_B^2+m_K^2-2\,m_BE^*_K$.}
+\ei
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.4\linewidth]{figs/phd_thesis/search_for_b2hnn/q2rec_vs_q2gen/Bplus2Kplus_Bsig_H_reconstructed_q2_vs_Q2_gen.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Signal candidate selection and event pre-selection}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\bi
+\item $\Bp$ candidate with smallest \qrec selected as signal candidate.
+\bi
+\itemiii Correct candidate in $>90\%$ of the cases.
+\itemiii PID requirement to suppress pion background.
+\ei
+\itemiii Loose event pre-selection: 
+\bi
+\itemiii {$4\leq N_{\mathrm{tracks}}\leq10$.}
+\itemiii {$\theta(\mathbf{p_{miss}})\in$ CDC acceptance.}
+\itemiii {$E_{\mathrm{visible}}>4\gev$.}
+\itemiii {$\qrec>-1\gevcccc$.}
+\ei
+\ei
+\end{column}
+\begin{column}{0.5\linewidth}
+\centering
+\includegraphics[width=0.85\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/overlays_Bplus2Kplus_v34_Y4S_BDT1_training/Bsig_H_reconstructed_q2.pdf}
+\includegraphics[width=0.85\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/overlays_Bplus2Kplus_v34_Y4S_BDT1_training/nTracksCleaned.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\subsection{Binary classification}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Outline}
+ \tableofcontents[currentsection, currentsubsection, subsubsectionstyle=hide]
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Binary classification with boosted decision trees}
+\bi
+\item Selecting \BKpnn decays is challenging.
+\bi
+\itemiii Small branching fraction.
+\itemiii Neutrinos not detected.
+\ei
+\itemii Boosted decision tree (BDT) for background suppression.
+\bi
+\itemiii Trained with simulated signal and background events on a set of discriminative variables.
+\itemiii Combination of simple decision trees.
+\ei
+\ei
+\vspace{0.25cm}
+\centering
+\includegraphics[width=0.6\linewidth]{figs/tree/tree.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Variables}
+\bi
+\item Example of discriminative variables:
+\bi
+\itemiii Rest-of-the-event (ROE) variables.
+\itemiii Missing energy, momentum.
+\itemiii Event topology.
+\ei
+\ei
+\vspace{0.5cm}
+\centering
+\begin{columns}
+\begin{column}{0.333\linewidth}
+\centering
+\includegraphics[width=1.0\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/overlays_Bplus2Kplus_v34_Y4S_BDT1_training/B_sig_roeDeltae_ipMask.pdf}
+$\Delta E_{\mathrm{ROE}}\equiv E_{\mathrm{ROE}}-\frac{\sqrt{s}}{2}$ 
+\end{column}
+\begin{column}{0.333\linewidth}
+\vspace{-0.6cm}
+\centering
+\includegraphics[width=1.0\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/overlays_Bplus2Kplus_v34_Y4S_BDT1_training/B_sig_weMissM2_ipMask_0.pdf}
+\end{column}
+\begin{column}{0.333\linewidth}
+\centering
+\vspace{-2.65cm}
+\includegraphics[width=1.0\linewidth]{figs/sphericity_v4.pdf}\\
+\vspace{0.3cm}
+\includegraphics[width=1.0\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/overlays_Bplus2Kplus_v34_Y4S_BDT1_training/sphericity.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Event selection with two BDTs in series}
+\bi
+\item Train \bdto with 12 variables.
+\bi
+\item {\footnotesize \bdto$>0.9\implies$ signal retention of 85\% / background rejection of 98\%.}
+\ei
+\item Train \bdtt with 35 variables on simulated events with \bdto$>0.9$.
+\ei
+\vspace{0.25cm}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\centering
+\includegraphics[width=0.7\linewidth]{figs/phd_thesis/search_for_b2hnn/classification/BDT1_Bplus2Kplus_v34_overfitting_b2logo.pdf}
+\includegraphics[width=0.7\linewidth]{figs/phd_thesis/search_for_b2hnn/classification/BDT2_Bplus2Kplus_v34_overfitting_b2logo.pdf}
+\end{column}
+\begin{column}{0.5\linewidth}
+\centering
+\includegraphics[width=0.9\linewidth]{figs/phd_thesis/search_for_b2hnn/classification/Bplus2Kplus_v34_significance_efficiency.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Signal search region}
+\bi
+\item Translate \bdtt selection into signal efficiency quantile:
+\bi
+\itemiii {$\tilde{\varepsilon}_{\mathrm{sig}}\equiv 1-\varepsilon_{\mathrm{sig}}(\bdtt)$.}
+\ei
+\itemii Define signal search region as $\tilde{\varepsilon}_{\mathrm{sig}}>0.92$.
+\bi
+\itemiii 12 bins in the $\tilde{\varepsilon}_{\mathrm{sig}}\times\qrec$ space.
+\ei
+\ei
+\vspace{0.25cm}
+\centering
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/classification/BDT2_Bplus2Kplus_v34_efficiency_fit.pdf}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/signal_search_region_Bplus2Kplus.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Expected yields in the signal search region (189\invfb)}
+\bi
+\item In signal search region, $\epem\to\BpBm$ background is dominant.
+\bi
+\itemii Background decay contributing the most: $\B\to D^{(*)}\ell\nu$, with $\ell=e,\mu$.
+\ei
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/overlays_Bplus2Kplus_v34_Y4S_with_continuum_weights/BDT2_Bplus2Kplus_v34_signal_inefficiency_zoom.pdf}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/overlays_Bplus2Kplus_v34_Y4S_with_continuum_weights/Bsig_H_reconstructed_q2_vs_BDT2_Bplus2Kplus_v34_signal_inefficiency.pdf}
+\end{frame}
+%===========================================================================================================
+\subsection{Comparison between data and simulation}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Outline}
+ \tableofcontents[currentsection, currentsubsection, subsubsectionstyle=show]
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Data samples}
+\bi
+\item Data samples used for the comparison between data and simulation:
+\bi
+\itemi  {$189\invfb$ collected at $\sqrt{s}=\mathrm{m}(\Y4S)$ ("on-resonance").} 
+\itemi {$18\invfb$ collected at $\sqrt{s}=\mathrm{m}(\Y4S)-60\mev$ ("off-resonance").}
+\ei
+\ei
+\end{frame}
+\subsubsection{Validation channel}
+%===========================================================================================================
+\begin{frame}{Validation channel: $\Bp\to\Kp\jpsi(\to\mumu)$}
+\begin{enumerate}
+\item Select $\Bp\to\Kp\jpsi(\to\mumu)$ decays in data and simulation.
+\item Remove the muons from the event and replace the kaon by a kaon sampled from simulated signal events.
+\item Recalculate the classifier input variables for the modified events.
+\item Examine the output of \bdto and \bdtt.
+\end{enumerate}
+\vspace{0.25cm}
+\centering
+\includegraphics[width=0.6\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/jpsi_validation/Bplus2Kplus_v34_jpsi_validation.pdf}
+\end{frame}
+%===========================================================================================================
+\subsubsection{Off-resonance data and simulation}
+%===========================================================================================================
+\begin{frame}{Off-resonance data and simulation}
+\bi
+\item Off-resonance data shape well modelled in the signal search region.
+\itemii Normalisation discrepancy factor $\frac{\mathrm{data}}{\mathrm{simulation}}=1.5$ is observed.
+\bi
+\itemii Corrected on the figure, included as a systematic uncertainty.
+\ei
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/overlays_Bplus2Kplus_v34_off_resonance_with_continuum_weights/Bsig_H_reconstructed_q2_vs_BDT2_Bplus2Kplus_v34_signal_inefficiency.pdf}
+\end{frame}
+%===========================================================================================================
+\subsubsection{On-resonance data and simulation}
+%===========================================================================================================
+\begin{frame}{On-resonance data and simulation}
+\bi
+\item On-resonance data and simulation in the $0.75<\tilde{\varepsilon}_{\mathrm{sig}}<0.90$ sideband.
+\itemii Continuum simulation corrected for the normalisation discrepancy observed with off-resonance data.
+\ei
+\vspace{0.5cm}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/overlays_Bplus2Kplus_v34_Y4S_sideband_with_scaled_continuum/Bsig_H_reconstructed_q2.pdf}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/overlays_Bplus2Kplus_v34_Y4S_sideband_with_scaled_continuum/BDT2_Bplus2Kplus_v34_signal_inefficiency.pdf}
+\end{frame}
+%===========================================================================================================
+\subsection{Result obtained with $(63+9)\invfb$ of data}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Outline}
+ \tableofcontents[currentsection, currentsubsection, subsubsectionstyle=hide]
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Data samples}
+\bi
+\item Data samples used in the following:
+\bi
+\itemi  {$63\invfb$ collected at $\sqrt{s}=\mathrm{m}(\Y4S)$ ("on-resonance").} 
+\itemi {$9\invfb$ collected at $\sqrt{s}=\mathrm{m}(\Y4S)-60\mev$ ("off-resonance").}
+\ei
+\itemi Result published in {\href{https://doi.org/10.1103/PhysRevLett.127.181802}{\color{blue!40!gray} Phys.~Rev.~Lett.~127 (2021) 181802}.}
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Sources of systematic uncertainty}
+\bi
+\item Physics modelling:
+\bi
+\itemii {Normalisation of each background source (50\%).}
+\itemii {Uncertainty on the branching fractions of $B$ meson decays.}
+\itemii {Uncertainty on the $B\to K$ form factor in signal simulation.}
+\ei
+\itemii Detector modelling:
+\bi
+\itemii {Modelling of the track-finding efficiency.}
+\itemii {Modelling of the measured energy of neutral particles.}
+\itemii {Modelling of the PID selection efficiency.}
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Expected upper limit for $(63+9)\invfb$ of data}
+\bi
+\item Examine how the expected upper limit on $\Br(\BKpnn)$ increases when including sources of systematic uncertainties:
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.6\linewidth]{figs/br_stat_syst.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Statistical model}
+\bi
+\item Binned likelihood defined in the \bdtt$\times$\ptK$\times\sqrt{s}$ space.
+\begin{center}
+\includegraphics[width=0.5\linewidth]{figs/bins_2D.pdf}
+\end{center}
+\vspace{-0.2cm}
+\item {$
+\mathcal{L}(\mu,\boldsymbol{\theta}|n_1,\,...,\,n_{24})=
+\frac{1}{Z}
+\prod^{24}_{b=1}\mathrm{Pois}(n_b|\nu_b(\mu,\boldsymbol{\theta}))\,
+p(\boldsymbol{\theta})
+$.}
+\bi
+\itemiii {$n_1,...,n_{24}$ ($\nu_1,...,\nu_{24}$) events are observed (expected).}
+\itemiii Signal strength $\mu=\frac{\Br(\BKpnn)}{\Br(\BKpnn)_{\mathrm{SM}}}$
+\itemiii Nuisance parameters $\boldsymbol{\theta}$ to include systematic uncertainties \textit{via} event-count modifiers.
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Result of the fit to $(63+9)\invfb$ of data}
+\bi
+\item {\small $\mu = 4.2^{+3.4}_{-3.2} = 4.2^{+2.9}_{-2.8}(\mathrm{stat}){}^{+1.8}_{-1.6}(\mathrm{syst})$.}
+\itemii {\small $\mathrm{BR}(\BKpnn)=\left[1.9^{+1.6}_{-1.5}\right] \times 10^{-5} = \left[1.9^{+1.3}_{-1.3}(\mathrm{stat}){}^{+0.8}_{-0.7}(\mathrm{syst})\right] \times 10^{-5}$.}
+\ei
+\vspace{0.5cm}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\bi
+\item Off-resonance.
+\ei
+\centering
+\includegraphics[width=1.0\linewidth]{figs/postfit_offresCR.pdf}
+\end{column}
+\begin{column}{0.5\linewidth}
+\bi
+\item On-resonance.
+\ei
+\centering
+\includegraphics[width=1.0\linewidth]{figs/SRs_postfit.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Comparison with previous results}
+
+\centering
+\includegraphics[width=0.55\linewidth]{figs/phd_thesis/search_for_b2hnn/first_iteration/br_comp.pdf}
+
+\bi
+\item Assuming uncertainty scaling as $1/\sqrt{L}$, inclusive tagging is better than hadronic and semileptonic tagging methods.
+\ei
+
+\vspace{0.2cm}
+
+\adjustbox{max height=0.4\textheight,max width=1.0\textwidth}{
+\begin{tabular}{llllll}
+\input{tables/sensitivity.tex}
+\end{tabular}
+}
+\end{frame}
+%===========================================================================================================
+\subsection*{Expected upper limit for 189\invfb of data}
+%===========================================================================================================
+\begin{frame}{Expected upper limit for 189\invfb of data}
+\bi
+\item Expected upper limit with 189\invfb of data.
+\bi
+\itemi {$\Br(\BKpnn)<1.0\times 10^{-5}$ ($90\%\,\mathrm{C.L.}$).}
+\ei
+\itemi Current best upper limit obtained by Babar with $429\invfb$ of data.
+\bi
+\itemi {$\Br(\BKpnn)<1.6\times 10^{-5}$ ($90\%\,\mathrm{C.L.}$). \\ \href{https://doi.org/10.1103/PhysRevD.87.112005}{\color{blue!40!gray} \tiny [Phys.~Rev.~D \textbf{87}, 112005 (2013) (Babar)]}} 
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\section{Conclusion and outlook}
+%==========================================================================================================
+\begin{frame}{Conclusion and outlook}
+\bi
+\item First search for \BKnn decays with an inclusive tagging method.
+\itemii Result published with $(63+9)\invfb$ of Belle II data.
+\bi
+\itemii {\href{https://doi.org/10.1103/PhysRevLett.127.181802}{\color{blue!40!gray} Phys.~Rev.~Lett.~127 (2021) 181802}.}
+\ei
+\itemii The inclusive tagging method provides a better sensitivity per integrated luminosity than the tagging methods of previous searches.
+\itemii The \textit{expected} upper limit on $\Br(\BKpnn)$ with $(189+18)\invfb$ is better than the current best upper limit.
+\itemii The success of the inclusive tagging method opens new opportunities for the search of rare decays with neutrinos in the final state.
+\ei
+\end{frame}
+%===========================================================================================================
+\section*{}
+%==========================================================================================================
+\begin{frame}{}
+\centering
+{\Large Thank you for your attention.}\\ 
+
+
+\end{frame}
+%===========================================================================================================
+\section*{Backup}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Bug in background category weighting}
+\centering
+\includegraphics[width=0.49\linewidth]{figs/BP_Before.pdf}
+\includegraphics[width=0.49\linewidth]{figs/BP_After.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Transition between two generations of quarks}
+\bi
+\itemiii Transition between two generations of quarks possible because the weak eigenstates are linear combinations of the mass eigenstates:
+\ei
+\vspace{1.0cm}
+\centering
+{
+$
+\begin{pmatrix}
+d'\\
+s'\\
+b'\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+V_{ud} & V_{us} & V_{ub} \\
+V_{cd} & V_{cs} & V_{cb} \\
+V_{td} & V_{ts} & V_{tb} \\
+\end{pmatrix}
+\begin{pmatrix}
+d\\
+s\\
+b\\
+\end{pmatrix}
+$
+\\
+\vspace{1.0cm}
+$
+\begin{pmatrix}
+|V_{ud}| & |V_{us}| & |V_{ub}| \\
+|V_{cd}| & |V_{cs}| & |V_{cb}| \\
+|V_{td}| & |V_{ts}| & |V_{tb}| \\
+\end{pmatrix}
+\approx
+\begin{pmatrix}
+0.974 & 0.226 & 0.004 \\
+0.226 & 0.973 & 0.041 \\
+0.009 & 0.040 & 0.999 \\
+\end{pmatrix}
+$
+}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Experimental anomalies in $b\to s\ell^+\ell^-$}
+\bi
+\item {$R_{H}\equiv\frac{\mathrm{\Br}(B\to H\mumu)}{\mathrm{\Br}(B\to H\epem)}$.}
+\itemii In 2017, LHCb reported a value of $R_{K^{*0}}$ $2.3\,\sigma$ smaller than the SM prediction.
+\itemii In 2020, LHCb reported the result of a fit to the angular variables of $\Bz\to K^{*0}\mumu$ decays showing a $3.3\,\sigma$ deviation from the predicted SM value of a Wilson coefficient specific to \BKll decays called $C_9$.
+\itemii In 2021, LHCb reported the result of a fit to the angular variables of $\B^+\to K^{*+}\mumu$ decays showing a $3.1\,\sigma$ deviation from the predicted SM value of the same Wilson coefficient $C_9$.
+\itemii In 2022, LHCb reported a value of $R_{K^+}$ $3.1\,\sigma$ smaller than the SM prediction.
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Nano-beam scheme (idea from Pantaleo Raimondi)}
+\begin{columns}
+\begin{column}{0.52\linewidth} 
+{\small
+\bi
+\item Goal: $\beta_y^*=0.3\mm$.
+\item Hourglass effect limited if $\sigma^{eff}_z<\beta_y^*$.
+\item Half crossing angle:
+\bi
+\item $\phi_x\approx40\mrad$.
+\ei
+\item Nominal beam spot parameters:
+\bi
+\item $\sigma_x\approx10\mum$.
+\item $\sigma^{eff}_z=\frac{\sigma_x}{\sin\phi_x}\approx0.25\mm$.
+\item $\sigma_y\approx50\nm$.
+\ei
+\ei
+\includegraphics[width=0.9\linewidth]{figs/nano_beam_2} 
+}
+\end{column}
+\begin{column}{0.48\linewidth}
+\includegraphics[width=1\linewidth]{figs/nano_beam} 
+\small\href{https://docs.belle2.org/record/1212?ln=en}{\color{blue!40!gray} [BELLE2-TALK-CONF-2018-142]}
+\href{https://arxiv.org/abs/1809.01958}{\color{blue!40!gray} [1809.01958]}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Pixel Detector (PXD)}
+\bi
+\item Based on depleted p-channel field-effect transistors (DEPFETs).
+\itemii 40 modules of $768\times 250$ DEPFET pixels.
+\itemii Impact-parameter resolution of approximately 12\mum.
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.4\linewidth]{figs/phd_thesis/experimental_setup/pxd_xy}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Silicon Vertex Detector (SVD)}
+\bi
+\item Based on double-sided silicon strips.
+\itemii {$p$-side and $n$-side strips perpendicular to determine coordinates of charged paticles.}
+\ei
+\vspace{0.25cm}
+\centering
+\includegraphics[width=0.4\linewidth]{figs/phd_thesis/experimental_setup/svd.pdf}
+\includegraphics[width=0.3\linewidth]{figs/phd_thesis/experimental_setup/svd_xy}\\
+\includegraphics[width=0.7\linewidth]{figs/phd_thesis/experimental_setup/svd_zx}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Central Drift Chamber (CDC)}
+\bi
+\item 56 layers of wires with axial or skewed orientation.
+\itemii Electron released during ionisation of a gas mixture cause avalanches of electrons.
+\itemii {$p_T=|q|B\rho$ with a relative resolution of the order of 0.1\%}.
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.4\linewidth]{figs/phd_thesis/experimental_setup/cdc_wires}
+\includegraphics[width=0.4\linewidth]{figs/phd_thesis/experimental_setup/cdc}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Particle identification}
+\bi
+\item Two detectors use Cherenkov radiations for particle identification.
+\bi
+\itemii Aerogel Ring-Imaging Cherenkov (ARICH).
+\itemii Time-Of-Propagation (TOP) counter.
+\ei
+\itemii Particle identification from $\beta=1/(n \cos \theta_C)$ and $m=p/(\gamma\beta)$.
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.9\linewidth]{figs/phd_thesis/experimental_setup/arich_top.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Example of ROC curve}
+\centering
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/data_analysis/bdt_output.pdf}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/data_analysis/roc_curve.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Choice of BDT parameters}
+\centering
+\adjustbox{max height=0.4\textheight,max width=1.0\textwidth}{
+\begin{tabular}{llll}
+\input{tables/bdt12.tex}
+\end{tabular}
+}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/classification/hyperparameter_optimisation_v33_16files_rank.pdf}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/classification/hyperparameter_optimisation_v33_16files_ratio.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Input variables for \bdto}
+\centering
+\adjustbox{max height=0.4\textheight,max width=1.0\textwidth}{
+\begin{tabular}{lll}
+\input{tables/feature_importance_BDT1.tex}
+\end{tabular}
+}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Input variables for \bdtt (\BKpnn)}
+\centering
+\adjustbox{max height=0.4\textheight,max width=1.0\textwidth}{
+\begin{tabular}{ll}
+\input{tables/feature_importance_BDT2_Bplus2Kplus_v34_col1.tex}
+\end{tabular}
+\begin{tabular}{ll}
+\input{tables/feature_importance_BDT2_Bplus2Kplus_v34_col2.tex}
+\end{tabular}
+}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Input variables for \bdtt (\BKznn)}
+\centering
+\adjustbox{max height=0.4\textheight,max width=1.0\textwidth}{
+\begin{tabular}{ll}
+\input{tables/feature_importance_BDT2_Bzero2Kshort_v34_col1.tex}
+\end{tabular}
+\begin{tabular}{ll}
+\input{tables/feature_importance_BDT2_Bzero2Kshort_v34_col2.tex}
+\end{tabular}
+}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Input variable selection}
+\centering
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/classification/variable_selection_Bplus2Kplus_v34.pdf}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/classification/variable_selection_Bzero2Kshort_v34.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Signal selection efficiency in the signal search region}
+\bi
+\itemi In the signal search region, the signal efficiency is 15\% for $q^2\approx0$ and drops to zero for $q^2>18\gev^2/c^4$.
+\bi
+\itemii Sensitive to potential light dark matter candidates.
+\ei
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/Bplus2Kplus_v34_efficiency_vs_q2.pdf}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/theoretical_motivation/phase_space_vs_ff.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Validation channel: $\Bp\to\Kp\jpsi(\to\cancel{\mumu})$}
+\begin{enumerate}
+\item Select $\Bp\to\Kp\jpsi(\to\mumu)$ decays in data and simulation.
+\bi
+\itemii {$ \left|M_{\mu\mu}-M^{\mathrm{PDG}}_{\jpsi}\right|<0.05\gevcc $}
+\itemii {$ |\Delta E|\equiv\left|E_B^*-\frac{\sqrt{s}}{2}\right|<0.1\gev $}
+\itemii {$ M_{\mathrm{bc}}\equiv\sqrt{\left(\frac{\sqrt{s}}{2c^2}\right)^2-\left(\frac{p^*_B}{c}\right)^2}>5.25\gevcc $}
+\ei
+\end{enumerate}
+\vspace{0.25cm}
+\centering
+\includegraphics[width=0.7\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/jpsi_validation/Bplus2Kplus_v34_jpsi_skim.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Correction of continuum background mis-modelling}
+\bi
+\item Data-driven method to correct mis-modelling of off-resonance data.
+\begin{enumerate}
+	\itemii Train a binary classifier (\bdtc) to distinguish {\color{blue}simulation} \textit{vs} {\color{red}data}.
+\itemii Given the output of \bdtc, the simulated events are weighted according to $\mathrm{\bdtc}/(1-\mathrm{\bdtc})$.
+\end{enumerate}
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.495\textwidth]{figs/phd_thesis/search_for_b2hnn/classification/BDTC_Bplus2Kplus_v34_overfitting_b2logo.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Correction of continuum background mis-modelling}
+\bi
+\item Agreement between off-resonance data and simulation improved.
+\ei
+\vspace{0.5cm}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+{\small Before reweighting:}
+\includegraphics[width=1.0\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/overlays_Bplus2Kplus_v34_off_resonance_no_continuum_weights/B_sig_roeDeltae_ipMask.pdf}
+\end{column}
+\begin{column}{0.5\linewidth}
+{\small After reweighting:}
+\includegraphics[width=1.0\linewidth]{figs/phd_thesis/search_for_b2hnn/data_mc/overlays_Bplus2Kplus_v34_off_resonance_with_continuum_weights/B_sig_roeDeltae_ipMask.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Statistical model}
+\bi
+\item {$\{\mathrm{samples}\}=\{\mathrm{Signal},\,\uubar,\,\ddbar,\,\ccbar,\,\ssbar,\,\tau\overline{\tau},\,\BzBzb,\,\BpBm\}$.}
+\itemii 24 bins where $n_1,...,n_{24}$ ($\nu_1,...,\nu_{24}$) events are observed (expected).
+\itemii Fit parameters:
+\bi
+\itemii Signal strength $\mu=\Br(\BKnn)/\Br(\BKnn)_{\mathrm{SM}}$.
+\itemii Nuisance parameters $\boldsymbol{\theta}=\begin{pmatrix} \mu_{\uubar},\,\mu_{\ddbar},\,...,\,\mu_{\BpBm},\,\theta_{8},\,...,\,\theta_{N} \end{pmatrix}^T$ to include systematic uncertainties \textit{via} event-count modifiers.
+\ei
+\itemii Likelihood function = product of Poisson probability density functions combining the information from the 24 bins. 
+\bi
+\itemii {$
+\mathcal{L}(\mu,\boldsymbol{\theta}|n_1,\,...,\,n_{24})=
+\frac{1}{Z}
+\prod^{24}_{b=1}\mathrm{Pois}(n_b|\nu_b(\mu,\boldsymbol{\theta}))\,
+p(\boldsymbol{\theta})
+$.}
+\itemii {$
+\nu_{b}(\mu,\boldsymbol{\theta})=
+\sum_{s\in\{\mathrm{samples}\}}\mu_s\left(\nu^{0}_{bs}+\Delta_{bs}(\boldsymbol{\theta})\right)
+$.}
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Fit validation}
+\bi
+\item Toys  generated  for  the simulated data set.
+\bi
+\itemii Poisson statistical fluctuations.
+\itemii Gaussian systematic fluctuations.
+\ei
+\ei
+\vspace{0.25cm}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\bi
+\item {\scriptsize Signal injection study, $\mu_{\mathrm{sig}}\in\{1,\,5,\,20\}$}.
+\ei
+\centering
+\includegraphics[width=1.0\linewidth]{figs/signal_pulls_pyhf.pdf}
+\end{column}
+\begin{column}{0.5\linewidth}
+\bi
+\item {\scriptsize Data-model compatibility.}
+\ei
+\centering
+\includegraphics[width=1.0\linewidth]{figs/data_model_compatibility_pyhf.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Upper limit determination with the \CLs method}
+\bi
+\item Likelihood ratio: $
+\lambda(\mu)=
+\frac{\mathcal{L}(\mu,\boldsymbol{\hat{\hat{\theta}}}\,|\,n_1,\,...,\,n_{N_b})}
+{\mathcal{L}(\hat{\mu},\boldsymbol{\hat{\theta}}\,|\,n_1,\,...,\,n_{N_b})}$.
+\itemii Test statistic: $
+q_\mu=
+\begin{cases}
+-2\ln\lambda(\mu) & \text{if } \mu\ge\hat{\mu}, \\
+0 & \text{otherwise}.
+\end{cases}
+$
+\itemii {$p$-value (level of agreement between data and hypothesised $\mu$):}
+\bi
+\itemii {$p_{s+b}=P(q_\mu>q_{\mu,\mathrm{obs}}\,|\,\mu)=\int_{q_{\mu,\mathrm{obs}}}^{\infty}p(q_\mu|\mu)\,\dd q_{\mu}$.}
+\ei
+\itemii {$p$-value (background-only hypothesis):}
+\bi
+\itemii {$p_{b}=P(q_\mu>q_{\mu,\mathrm{obs}}\,|\,0)=\int_{q_{\mu,\mathrm{obs}}}^{\infty}p(q_\mu|0)\,\dd q_{\mu}$.}
+\ei
+\itemii {\CLs ratio: $\CLs=\frac{p_{s+b}}{p_{b}}$.}
+\itemii {$90\%$ CL upper limit on $\mu$: largest value of $\mu$ such that $\CLs\ge0.1$.}
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Upper limit on $\Br(\BKpnn)$ with $(63+9)\invfb$ of data}
+\bi
+\item Upper on the branching fraction determined using the \CLs method.
+\itemi {$\Br(\BKpnn)<4.1\times 10^{-5}\,@\,90\% \mathrm{C.L.}$}
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.5\linewidth]{figs/B_Knunu_CLs_unblinding_90CL_both_expected_and_observed.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Expected upper limit with $(189+18)\invfb$ of data}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/fit/limit_vs_syst_Bplus2Kplus.pdf}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/fit/limit_vs_syst_Bzero2Kshort.pdf}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/fit/CLs_expected_Bplus2Kplus.pdf}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/fit/CLs_expected_Bzero2Kshort.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Uncertainty on $\mu$ with $(63+9)\invfb$ of data}
+\bi
+\item {\small $\mu = 4.2^{+3.4}_{-3.2} = 4.2^{+2.9}_{-2.8}(\mathrm{stat}){}^{+1.8}_{-1.6}(\mathrm{syst})$.}
+\itemii Total uncertainty on $\mu$: profile likelihood scan, fitting the model with fixed values of $\mu$ while keeping the other fit parameters free.
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.5\linewidth]{figs/mu_profile.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Upper limit on $\Br(\BKnn)$}
+\bi
+\item Upper on the branching fraction determined using the \CLs method.
+\itemiii Reminder:
+\bi
+\itemiii {$\Br(\BKpnn)_{\mathrm{SM}}=\mypow{(4.6\pm0.5)}{-6}$. \hfill \href{https://doi.org/10.1016/j.ppnp.2016.10.001}{\color{blue!40!gray} \tiny [{Prog.~Part.~Nucl.~Phys.~\textbf{92}, 50 (2017)]}}}
+\itemiii {$\Br(\BKzznn)_{\mathrm{SM}}=\mypow{(4.3\pm0.5)}{-6}$.}
+\ei
+\ei
+\vspace{0.5cm}
+
+\adjustbox{max height=0.4\textheight,max width=1.0\textwidth}{
+\begin{tabular}{llllllll}
+\input{tables/previous_measurements.tex}
+\end{tabular}
+}
+
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{$p_T$ \textit{vs} \qrec}
+\centering
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/first_iteration/Bplus2Kplus_Bsig_H_reconstructed_q2_vs_B_sig_K_pt.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Post-fit normalisation parameters}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/first_iteration/bg_shift.pdf}
+\includegraphics[width=0.49\linewidth]{figs/phd_thesis/search_for_b2hnn/first_iteration/corr_data_fit.pdf}
+\end{frame}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{\Bp background in the signal search region}
+\centering
+\adjustbox{max height=0.4\textheight,max width=1.0\textwidth}{
+\begin{tabular}{lrlr}
+\input{tables/table_charged_bkg_Bplus2Kplus_v34.tex}
+\end{tabular}
+}
+\end{frame}
+%===========================================================================================================

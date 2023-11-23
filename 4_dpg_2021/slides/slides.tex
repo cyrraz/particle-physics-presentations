@@ -1,0 +1,286 @@
+%===========================================================================================================
+\def\bdto {BDT$_1$\xspace}
+\def\bdtt {BDT$_2$\xspace}
+\def\bdtoff {BDT$_{\mathrm{c}}$\xspace}
+
+\def\lumiyfours         {62.9\,\invfb\xspace} % 62.93
+\def\lumioff            {9.2\,\invfb\xspace} % 9.22
+%===========================================================================================================
+\begin{frame}{Outline}
+ \tableofcontents
+\end{frame}
+%===========================================================================================================
+\section{Introduction}
+%===========================================================================================================
+\subsection{The SuperKEKB collider}
+%===========================================================================================================
+\begin{frame}{SuperKEKB}
+\begin{columns}
+\begin{column}{0.48\linewidth} 
+\bi \small
+\item{\epem collider in Tsukuba, Japan.}
+\itemi{$\sqrt{s}=10.6\gev=\mathrm{m}(\Y4S)c^2$.}
+\itemi{$\mathrm{BR}(\Y4S\to\BB)>96\%$.}
+\itemi{$\displaystyle\int_{2019}^{\rm Summer\,\,2020}\,L\,\mathrm{dt}\approx63\invfb$.}
+\itemi{World highest instant. luminosity.}
+\bi
+\item{$L=2.4\times10^{34}\cms$ achieved in June 2020.}
+\ei
+\ei
+\end{column}
+\begin{column}{0.52\linewidth}
+\centering
+\includegraphics[width=0.75\linewidth]{figs/super_kekb}
+\includegraphics[width=0.65\linewidth, angle=-90]{figs/SuperKEKB_roadmap2020}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\subsection{The Belle II detector}
+%===========================================================================================================
+\begin{frame}{{The Belle II detector}}
+\begin{columns}
+\begin{column}{0.45\linewidth} 
+\begin{itemize} \small
+\item Pixel Detector (PXD).
+\vspace{0.25cm}
+\item Silicon Vertex Detector (SVD).
+\vspace{0.25cm}
+\item Central Drift Chamber (CDC).
+\vspace{0.25cm}
+\item Calorimeter (ECL).
+\vspace{0.25cm}
+\item Aerogel Ring-Imaging Cherenkov (ARICH).
+\vspace{0.25cm}
+\item Time-Of-Propagation (TOP) counter.
+\vspace{0.25cm}
+\item $K_L^0$ and $\mu$ detection (KLM).
+\end{itemize}
+\end{column}
+\begin{column}{0.55\linewidth}
+\centering
+\begin{tikzpicture}
+\node (a) {\includegraphics[width=0.9\linewidth]{figs/belle2_with_flags}};
+\node (b) [below=0.25cm of a] {\includegraphics[width=0.65\linewidth]{figs/vxd.pdf} };
+\node(c)  [above=-0.25cm of b, xshift=-1.5cm]{};
+\draw[thick, red,->] (a.south west){}+(0.9cm,0.1cm) to (c);
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+%===========================================================================================================
+\section{Search for \BKnn}
+\begin{frame}{Outline}
+ \tableofcontents[currentsection]
+\end{frame}
+%===========================================================================================================
+\subsection{Motivation}
+%===========================================================================================================
+\begin{frame}{Lowest-order SM quark level diagrams for $b\to s\nunub$}
+\begin{columns}
+\begin{column}{0.5\linewidth} 
+\bi
+\item Loop
+\includegraphics[width=0.9\linewidth]{figs/b2snn_loop}
+\vspace{0.5cm}
+\ei
+\end{column}
+\begin{column}{0.5\linewidth}
+\bi
+\item Box \hfill
+\includegraphics[width=0.9\linewidth]{figs/b2snn_box}
+\vspace{0.5cm}
+\ei
+\end{column}
+\end{columns}
+\bi
+\item Advantage of \nulnulb (over \ellell): no virtual photon contribution, thus cleaner theoretical prediction.
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Branching ratio (BR) in the Standard Model and beyond}
+\bi
+\item Standard Model (SM) prediction: 
+\bi
+\itemi {$\mathrm{BR}(\Bp\to\Kp\nunub)_{\mathrm{SM}}=(4.6\pm0.5)\times10^{-6}$ \hfill \href{https://arxiv.org/abs/1606.00916}{\color{blue} [1606.00916]}.}
+\ei
+\itemi Multiple models beyond the SM constrained by $\mathrm{BR}(\Bp\to\Kp\nunub)$:
+\bi
+\itemi leptoquarks \hfill \href{https://arxiv.org/pdf/1806.05689.pdf}{\color{blue} [1806.05689]}.
+\itemi axions \hfill \href{https://arxiv.org/pdf/2002.04623.pdf}{\color{blue} [2002.04623]}.
+\itemi dark matter particles \hfill \href{https://arxiv.org/pdf/1911.03490.pdf}{\color{blue} [1911.03490]}.
+\itemi ... 
+\ei
+\ei
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Signal and background}
+\bi
+\item Signal.
+\bi
+\itemii {$\epem\to\Y4S\to B^+(\to K^+\nunub)B^-$}.
+\ei
+\itemii Background.
+\bi
+\itemii Generic $B$-meson decays: $\epem\to\Y4S\to\BpBm$ or $\BzBzb$.
+\itemii Continuum events: $\epem\to q\bar{q}$ or $\tau^{+}\tau^{-}$ ($q=u,d,s,c$ quarks). 
+\ei
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.5\linewidth]{figs/sphericity_v4}
+\end{frame}
+%===========================================================================================================
+\subsection{Classifiers}
+%===========================================================================================================
+\begin{frame}{Features}
+\bi
+\item $\mathcal{O}(100)$ discriminative features considered.
+\itemii Feature selection (parallelised):
+\bi
+\itemiii Iteratively remove variables from the training.
+\itemiii Check performance degradation.
+\ei
+\itemii After selection, boosted decision trees (BDT) trained with 51 features.
+\ei
+
+\vspace{0.5cm}
+
+\begin{columns}
+\begin{column}{0.333\linewidth}
+\centering
+\includegraphics[width=1.0\linewidth]{figs/B_sig_weMissM2_ipMask_0}
+\end{column}
+\begin{column}{0.333\linewidth}
+\centering
+\includegraphics[width=1.0\linewidth]{figs/sphericity}
+\end{column}
+\begin{column}{0.333\linewidth}
+\centering
+\includegraphics[width=1.0\linewidth]{figs/nTracksCleaned}
+\end{column}
+\end{columns}
+
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Training}
+\bi
+\item Manual boosting.
+\bi
+\itemii Train \bdto on $\mathcal{O}(10^7)$ simulated events.
+\itemii Train \bdtt on $\mathcal{O}(10^7)$ simulated events with \bdto$>0.9$.
+\ei
+\ei
+\vspace{0.5cm}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\includegraphics[width=1.0\linewidth]{figs/significance_bdt1_preliminary}
+\end{column}
+\begin{column}{0.5\linewidth}
+\includegraphics[width=1.0\linewidth]{figs/significance_bdt2_preliminary}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Overfitting check}
+\bi
+\item A bit of overfitting is not problematic as long as the classification behaves the same on simulation and on data.
+\bi
+\itemiii See F. Dattola's presentation [T81.3].
+\ei
+\ei
+\vspace{0.5cm}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\includegraphics[width=1.0\linewidth]{figs/overfitting_bdt1_preliminary}
+\end{column}
+\begin{column}{0.5\linewidth}
+\includegraphics[width=1.0\linewidth]{figs/overfitting_bdt2_preliminary}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Simulation reweighting using a classifier \hfill {\tiny 
+\href{https://iopscience.iop.org/article/10.1088/1742-6596/368/1/012028}{\color{blue!40!gray}[doi:10.1088/1742-6596/368/1/012028]}
+}}
+\bi
+\item Data-driven method to correct mismodeling in simulation.
+\begin{enumerate}
+	\itemii Train a binary classifier (\bdtoff) to distinguish {\color{blue}simulation} \textit{vs} {\color{red}data}.
+\itemii Given the output $p$ of \bdtoff, the simulated events are weighted according to $p/(1-p)$.
+\end{enumerate}
+\ei
+\vspace{0.5cm}
+\centering
+\includegraphics[width=0.5\textwidth]{figs/overfitting_bdtc_preliminary}
+\end{frame}
+%===========================================================================================================
+\begin{frame}{Simulation reweighting using a classifier \hfill {\tiny 
+\href{https://iopscience.iop.org/article/10.1088/1742-6596/368/1/012028}{\color{blue!40!gray}[doi:10.1088/1742-6596/368/1/012028]}
+}}
+\bi
+\item This reweighting procedure improves the data-simulation agreement for data collected below the \Y4S threshold.
+\ei
+\vspace{0.5cm}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+{\small Before reweighting:}
+\includegraphics[width=1.0\linewidth]{figs/B_sig_roeDeltae_ipMask}
+\end{column}
+\begin{column}{0.5\linewidth}
+{\small After reweighting:}
+\includegraphics[width=1.0\linewidth]{figs/B_sig_roeDeltae_ipMask_w}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+\section{Conclusion and outlook}
+%==========================================================================================================
+\begin{frame}{Conclusion and outlook}
+\bi
+\item BDTs are trained to select \BKnn at Belle II.
+\itemi A binary classifier can be used to correct simulation mismodeling.
+\itemi Other algorithms, such as neural networks, are currently studied.	
+\ei
+\end{frame}
+%===========================================================================================================
+\section*{}
+%==========================================================================================================
+\begin{frame}{}
+\centering
+\Large Thank you for your attention.
+\end{frame}
+%===========================================================================================================
+\section*{Backup}
+%===========================================================================================================
+\begin{frame}[noframenumbering]{Nano-beam scheme (idea from Pantaleo Raimondi)}
+\begin{columns}
+\begin{column}{0.52\linewidth} 
+{\small
+\bi
+\item Goal: $\beta_y^*=0.3\mm$.
+\item Hourglass effect limited if $\sigma^{eff}_z<\beta_y^*$.
+\item Half crossing angle:
+\bi
+\item $\phi_x\approx40\mrad$.
+\ei
+\item Nominal beam spot parameters:
+\bi
+\item $\sigma_x\approx10\mum$.
+\item $\sigma^{eff}_z=\frac{\sigma_x}{\sin\phi_x}\approx0.25\mm$.
+\item $\sigma_y\approx50\nm$.
+\ei
+\ei
+\includegraphics[width=0.9\linewidth]{figs/nano_beam_2} 
+}
+\end{column}
+\begin{column}{0.48\linewidth}
+\includegraphics[width=1\linewidth]{figs/nano_beam} 
+\small\href{https://docs.belle2.org/record/1212?ln=en}{\color{blue!40!gray} [BELLE2-TALK-CONF-2018-142]}
+\href{https://arxiv.org/abs/1809.01958}{\color{blue!40!gray} [1809.01958]}
+\end{column}
+\end{columns}
+\end{frame}
+%===========================================================================================================
+

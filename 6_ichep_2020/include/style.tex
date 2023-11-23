@@ -1,0 +1,30 @@
+% Packages
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{lmodern}   
+
+
+% Beamer theme
+\usetheme{CambridgeUS}
+
+% Beamer settings
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+% Bullet point commands
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\itemi}[1]{{\vspace{0.5cm}\item{{#1}}}}
+\newcommand{\itemii}[1]{{\vspace{0.25cm}\item{{#1}}}}
+\newcommand{\itemiii}[1]{{\vspace{0.1cm}\item{{#1}}}}
+
+% Commands useful in tables
+\newcommand{\Tstrut}{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand{\Bstrut}{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+
+% Definitions
+\DeclareMathOperator{\e}{e}
+\DeclareMathOperator{\ii}{i}

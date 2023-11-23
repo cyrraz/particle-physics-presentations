@@ -1,0 +1,43 @@
+% Packages
+\usepackage{adjustbox}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usetikzlibrary{arrows, arrows.meta, decorations.markings, shapes, positioning, backgrounds, calc, fit, shapes.geometric}
+\tikzstyle{pathelement} = [rectangle, draw, text width=10em, minimum height=1.5em, text centered, line width=0.3mm]
+\tikzstyle{vecArrow}[black] = [
+    #1,
+    thick, 
+    double distance=1.4pt, 
+    shorten <= -0.85pt,
+    arrows={-Triangle[angle=60:7pt,#1,fill=white]},
+    postaction = {draw, -, line width = 1.4pt, white, shorten >= 4.0pt, shorten <= 4.0pt}
+  ]
+
+
+% Beamer theme
+\usetheme{CambridgeUS}
+
+% Beamer settings
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+% Bullet point commands
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\itemi}[1]{{\vspace{0.5cm}\item{{#1}}}}
+\newcommand{\itemii}[1]{{\vspace{0.25cm}\item{{#1}}}}
+\newcommand{\itemiii}[1]{{\vspace{0.1cm}\item{{#1}}}}
+
+% Commands useful in tables
+\newcommand{\Tstrut}{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand{\Bstrut}{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+
+% Definitions
+\DeclareMathOperator{\e}{e}
+\DeclareMathOperator{\ii}{i}
+\definecolor{chapterblue}{HTML}{4664aa}
+\definecolor{chapterred}{HTML}{A22223}
+\definecolor{chaptergreen}{HTML}{009682}
+\definecolor{chapterorange}{RGB}{223, 155, 27}
+\definecolor{chapterlightblue}{HTML}{23a1e0}
+\newcommand{\percentageNumber}[1]{{#1}\%}
