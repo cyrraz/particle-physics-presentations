@@ -6,7 +6,7 @@ The presentations are written using the [Beamer LaTeX class](https://en.wikipedi
 
 The references of the talks are the following:
 * C. Praz (on behalf of the Belle II collaboration), [*Electroweak penguins and radiative B decays at Belle II*](https://indico.in2p3.fr/event/29681/contributions/122493/), Electroweak session of the 57th Rencontres de Moriond, La Thuile, Italy, 2023.
-* C. Praz, *Search for B→Kνν decays with a machine learning method at the Belle II experiment*, PhD defense, DESY, Hamburg, Germany, 2022.
+* C. Praz, [*Search for B→Kνν decays with a machine learning method at the Belle II experiment*](http://dx.doi.org/10.3204/PUBDB-2022-04919), PhD defense, Hamburg, Germany, 2022.
 * C. Praz (on behalf of the Belle II collaboration), [*Search for the rare decay B→Kνν in the early Belle II dataset*](https://indico.cern.ch/event/982783/contributions/4365605/), Phenomenology Symposium, Pittsburgh, US, 2021.
 * C. Praz (on behalf of the Belle II collaboration), [*Search for B→K(star)νν at Belle II with machine learning techniques*](https://www.dpg-verhandlungen.de/year/2021/conference/dortmund/part/t/session/78/contribution/6), Deutsche Physikalische Gesellschaft Spring Meeting, Dortmund, Germany, 2021.
 * C. Praz (on behalf of the Belle II collaboration), [*Tracking performance and interaction point properties at Belle II*](https://indico.cern.ch/event/895924/contributions/4018211/), 29th International Workshop on Vertex Detectors, Tsukuba, Japan, 2020.
