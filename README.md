@@ -20,9 +20,9 @@ See also
 --------
 
 * [phd-thesis](https://github.com/cyrraz/phd-thesis):  PhD thesis in Particle Physics written in LaTeX.
-* [latex-thesis-template](https://github.com/cyrraz/latex-thesis-template): LaTeX template for a PhD, Master's or Bachelor's thesis.
+* [thesis-template](https://github.com/cyrraz/thesis-template): LaTeX template for a PhD, Master's or Bachelor's thesis.
 * [moriond-2023-proceedings-ewp-radiative](https://github.com/cyrraz/moriond-2023-proceedings-ewp-radiative): Proceedings written in LaTeX for my talk at the "57th Rencontres de Moriond 2023" conference.
-* [latex-letter-template](https://github.com/cyrraz/latex-letter-template):  Very simple template for a letter in LaTeX.
+* [letter-template](https://github.com/cyrraz/letter-template):  Very simple template for a letter in LaTeX.
 
 [cc-by-nc-shield]: https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg
 [cc-by-nc]: https://creativecommons.org/licenses/by-nc/4.0/
