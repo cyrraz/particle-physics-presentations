@@ -7,6 +7,7 @@ Collection of public presentations that I gave during my PhD and postdoctoral st
 
 The presentations are written using the [Beamer LaTeX class](https://en.wikipedia.org/wiki/Beamer_(LaTeX)). In each presentation folder, the pdf of the presentation can be produced by unzipping `figs.zip` and running `make`.
 For producing the pdf, you need a distribution for the TeX typesetting system, such as [TeX Live](https://www.tug.org/texlive/quickinstall.html).
+An alternative is to use an online LaTeX editor, such as [Overleaf](https://www.overleaf.com/).
 
 The references of the talks are the following:
 * C. Praz (on behalf of the Belle II collaboration), [*Electroweak penguins and radiative B decays at Belle II*](https://indico.in2p3.fr/event/29681/contributions/122493/), Electroweak session of the 57th Rencontres de Moriond, La Thuile, Italy, 2023.
